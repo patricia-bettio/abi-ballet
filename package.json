@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "client": "cd client && yarn start",
-    "dev": "concurrently --names 'server, client' --prefix-colors 'blue, green' \"nodemon server.js\" \"yarn run client\""
+    "dev": "concurrently --names 'server,client' --prefix-colors 'blue,green' \"nodemon server.js\" \"yarn run client\""
   },
   "license": "MIT",
   "dependencies": {
