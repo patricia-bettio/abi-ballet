@@ -18,7 +18,7 @@ function Home() {
       <SectionTest name={"Pat"} {...homeObjSix} />
       <div>
         <Section {...homeObjTwo} />
-        <NewForm label={"testLabel"} />
+        <NewForm label={"name"} />
       </div>
       <Section withForm label={["Name"]} label2={"Phone"} {...homeObjFive} />
       <Section withForm label={"Phone"} {...homeObjOne} />

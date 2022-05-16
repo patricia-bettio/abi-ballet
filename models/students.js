@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 //SCHEMA
 const Schema = mongoose.Schema;
 const studentsSchema = new Schema({
-  name: String,
-  age: String,
-  email: String,
+  name: Object,
+  // age: String,
+  // email: String,
   date: {
     type: Date,
     default: Date.now,

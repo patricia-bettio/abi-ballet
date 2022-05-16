@@ -19,12 +19,13 @@ router.get("/", (req, res) => {
 });
 
 router.post("/students", (req, res) => {
-  // console.log("body", req.body);
+  console.log("body", req.body);
   // save data to mongodb
   const data = req.body;
   const addNewStudent = new AddStudents(data);
   addNewStudent.save((error) => {
     if (error) {
+      console.log(error);
       res.status(500).json({ msg: "ops, data was not sent!" });
     } else {
       res.json({ msg: "posted data!" });

@@ -5,7 +5,10 @@ class NewForm extends React.Component {
   // const { label } = props;
 
   state = {
+    //   name
     [this.props.label]: "",
+    //   age
+    //   email
   };
 
   handleChange = (event) => {
