@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  
+  .border{
+    border-bottom: 1px solid black;
+    width: 200px;
+    /* margin-left: auto; */
+  }
+
+  .vertical-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .vertical-border {
+    border-left: 1px solid black;
+    height: 120px;
+  }
