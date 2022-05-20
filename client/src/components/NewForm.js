@@ -11,20 +11,11 @@ class NewForm extends React.Component {
     //   email
   };
 
-  handleChange = (event) => {
-    console.log("Name? ", event.target.name);
-    console.log("value? ", event.target.value);
-
-    // const target = event.target;
-    const labelName = event.target.name;
-    const value = event.target.value;
-
-    // update the state
-    // console.log("clean state", state);
-
-    // console.log(value);
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    // console.log("target", target);
     this.setState({
-      [labelName]: value,
+      [name]: value,
     });
   };
 
@@ -45,14 +36,26 @@ class NewForm extends React.Component {
     })
       .then(() => {
         console.log("it worked!!data sent");
+        this.resetForm();
       })
       .catch(() => {
         console.log("ops data was not sent!");
       });
   };
 
+  resetForm = () => {
+    // this.setState(this.state);
+    // TODO
+    // reset form
+    // console.log(this.state);
+    // console.log(this.state.name);
+    // this.setState({
+    //   [this.state.name]: "",
+    // });
+  };
+
   render() {
-    console.log("clean state", this.state);
+    console.log("Current form state:", this.state);
 
     return (
       <>

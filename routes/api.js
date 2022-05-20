@@ -24,12 +24,18 @@ router.post("/students", (req, res) => {
   const data = req.body;
   const addNewStudent = new AddStudents(data);
   addNewStudent.save((error) => {
+    // if (error) {
+    //   console.log(error);
+    //   res.status(500).json({ msg: "ops, data was not sent!" });
+    // } else {
+    //   res.json({ msg: "posted data!" });
+    // }
     if (error) {
-      console.log(error);
+      // console.log(error);
       res.status(500).json({ msg: "ops, data was not sent!" });
-    } else {
-      res.json({ msg: "posted data!" });
+      return;
     }
+    return res.json({ msg: "posted data now!" });
   });
 });
 
