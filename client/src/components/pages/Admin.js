@@ -16,14 +16,24 @@ class Admin extends React.Component {
 
   displayStudents = (students) => {
     return (
-      <ul>
+      <table>
         test
         {console.log(students)}
-        {/* {students.map((student) => (
-          // console.log("one student", student.name.name);
-          <li key={student.id}>{student.name}</li>
-        ))} */}
-      </ul>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>responsible</th>
+          <th>email</th>
+        </tr>
+        {students.map((student) => (
+          <tr>
+            <td key={student.id}>{student.name}</td>
+            <td key={student.id}>{student.age}</td>
+            <td key={student.id}>{student.representative}</td>
+            <td key={student.id}>{student.email}</td>
+          </tr>
+        ))}
+      </table>
     );
   };
 
