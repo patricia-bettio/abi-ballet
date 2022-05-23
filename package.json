@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && yarn run build",
+    "install-client": "cd client && yarn install",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
     "start": "node server.js",
     "client": "cd client && yarn start",
     "dev": "concurrently --names 'server,client' --prefix-colors 'blue,green' \"nodemon server.js\" \"yarn run client\""
