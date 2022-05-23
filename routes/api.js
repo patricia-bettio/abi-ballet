@@ -1,23 +1,35 @@
 const express = require("express");
 const router = express.Router();
-
-// get the model
 const AddStudents = require("../models/students");
 
-// ROUTES
-router.get("/", (req, res) => {
-  // get all data from my db and display on this api
-  AddStudents.find({})
-    .then((data) => {
-      // console.log("Data: ", data);
-      console.log("Data is available!");
-      res.json(data);
-    })
-    .catch((error) => {
-      console.log("error: ", error);
-    });
+// GET
+
+router.get("/", async (req, res) => {
+  AddStudents.find({}, (err, result) => {
+    if (err) {
+      res.send(err);
+    }
+    res.json(result);
+  });
 });
 
+//DELETE
+router.delete("/delete/:id", async (req, res) => {
+  const id = req.params.id;
+  await AddStudents.findByIdAndDelete(id).exec();
+  res.send("deleted!");
+});
+
+//PATCH
+router.patch("/patch/:id", async (req, res) => {
+  const id = req.params.id;
+  const newData = req.body;
+  console.log(req.params);
+  await AddStudents.findByIdAndUpdate(id, newData).exec();
+  res.send("updated!");
+});
+
+//POST
 router.post("/students", (req, res) => {
   console.log("body", req.body);
   // save data to mongodb
@@ -39,12 +51,12 @@ router.post("/students", (req, res) => {
   });
 });
 
-router.get("/name", (req, res) => {
-  const data = {
-    username: "patricia",
-    age: 21,
-  };
-  res.json(data);
-});
+// router.get("/name", (req, res) => {
+//   const data = {
+//     username: "patricia",
+//     age: 21,
+//   };
+//   res.json(data);
+// });
 
 module.exports = router;

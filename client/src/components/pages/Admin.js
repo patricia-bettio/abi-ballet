@@ -1,5 +1,12 @@
 import React from "react";
 import axios from "axios";
+import {
+  BsFillCheckCircleFill,
+  BsXCircleFill,
+  BsExclamationTriangle,
+  BsTrash,
+} from "react-icons/bs";
+import "./Admin.css";
 
 class Admin extends React.Component {
   state = {
@@ -17,30 +24,76 @@ class Admin extends React.Component {
   displayStudents = (students) => {
     return (
       <table>
-        test
-        {console.log(students)}
-        <tr>
-          <th>name</th>
-          <th>age</th>
-          <th>responsible</th>
-          <th>email</th>
-        </tr>
-        {students.map((student) => (
+        <tbody>
+          {console.log(students)}
           <tr>
-            <td key={student.id}>{student.name}</td>
-            <td key={student.id}>{student.age}</td>
-            <td key={student.id}>{student.representative}</td>
-            <td key={student.id}>{student.email}</td>
+            <th>name</th>
+            <th>age</th>
+            <th>responsible</th>
+            <th>email</th>
+            <th>Status</th>
+            <th>
+              Delete <BsExclamationTriangle />
+            </th>
           </tr>
-        ))}
+          {students.map((student, id) => (
+            <tr key={id}>
+              <td>{student.name}</td>
+              <td>{student.age}</td>
+              <td>{student.representative}</td>
+              <td>{student.email}</td>
+              {student.status === false ? (
+                <td>
+                  Inactive
+                  <BsXCircleFill
+                    onClick={() => {
+                      this.handleStatus(student);
+                    }}
+                  />
+                </td>
+              ) : (
+                <td>
+                  Active
+                  <BsFillCheckCircleFill
+                    onClick={() => {
+                      this.handleStatus(student);
+                    }}
+                  />
+                </td>
+              )}
+              <td>
+                <BsTrash
+                  onClick={() => {
+                    this.handleDelete(student._id);
+                  }}
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     );
+  };
+
+  handleDelete = (id) => {
+    axios.delete(`/api/delete/${id}`);
+    this.componentDidMount();
+    // todo: update after!
+    // this.displayStudents(this.state.allStudents);
+  };
+
+  handleStatus = (student) => {
+    console.log(student);
+    console.log(student.status);
+    axios.patch(`/api/patch/${student._id}`, {
+      status: student.status === false ? true : false,
+    });
+    this.componentDidMount();
   };
 
   render() {
     return (
       <>
-        <div>Admin PAGE {console.log(this.state.allStudents)}</div>
         <div>{this.displayStudents(this.state.allStudents)}</div>
       </>
     );
