@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { Button } from "../Button";
+import { BsPersonBoundingBox, BsExclamationTriangle } from "react-icons/bs";
 import "./LogIn.css";
 import {
   Navigate,
@@ -51,40 +52,63 @@ const LogIn = () => {
       {logged ? (
         <Navigate to="/Admin" />
       ) : (
-        <>
-          <div className="border">LOGIN</div>
+        <div className="loginWrapper">
+          <div className="loginArea">
+            <div className="restrictedArea">
+              <h2>
+                Restricted access
+                <BsPersonBoundingBox />
+              </h2>
+            </div>
 
-          <h1>Sign in</h1>
-          <form onSubmit={handleSubmit}>
-            <label name="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              ref={userRef}
-              onChange={(e) => setUser(e.target.value)}
-              value={user} //this is used to clear inputs
-              autoComplete="off"
-              required
-            ></input>
+            <h1>Log in area</h1>
+            <form className="loginForm" onSubmit={handleSubmit}>
+              <div className="inputArea">
+                {" "}
+                <label name="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  ref={userRef}
+                  onChange={(e) => setUser(e.target.value)}
+                  value={user} //this is used to clear inputs
+                  autoComplete="off"
+                  placeholder="Enter your username"
+                  required
+                ></input>
+              </div>
 
-            <label name="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              // ref={userRef}
-              onChange={(e) => setPass(e.target.value)}
-              value={password} //this is used to clear inputs
-              autoComplete="off"
-              required
-            ></input>
+              <div className="inputArea">
+                <label name="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  // ref={userRef}
+                  onChange={(e) => setPass(e.target.value)}
+                  value={password} //this is used to clear inputs
+                  autoComplete="off"
+                  placeholder="Enter your password"
+                  required
+                ></input>
+              </div>
 
-            <p className={error ? "showError" : "hideError"} ref={errorRef}>
-              Something went wrong, try again or contact the administrator.
-            </p>
+              <div className={error ? "showError" : "hideError"} ref={errorRef}>
+                <p>
+                  <BsExclamationTriangle />
+                  This area is exclusively for admins.{" "}
+                </p>
+                <p>
+                  If you are an admin and still cannot login, please contact the
+                  Support.
+                </p>
+              </div>
 
-            <Button>Sign in</Button>
-          </form>
-        </>
+              <Button buttonSize="btn-medium" buttonColor="blue">
+                Sign in
+              </Button>
+            </form>
+          </div>
+        </div>
       )}
     </>
   );

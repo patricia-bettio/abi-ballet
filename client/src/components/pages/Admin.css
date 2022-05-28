@@ -1,22 +1,44 @@
-table {
+.studentsTable {
   width: 100%;
   border-collapse: collapse;
+  padding: 2rem 0;
 }
 
-td,
-th {
+.studentsTable th {
   border: 1px solid #ddd;
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-th {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: lightblue;
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 400; */
   color: white;
+  text-align: center;
+}
+
+.studentsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 400; */
+}
+
+.studentsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.studentsTable td:nth-child(n + 5) {
+  text-align: center;
+}
+
+.studentsTable h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: "ExtraLight 200";
+  font-weight: 400;
+}
+.representative {
+  font-weight: 400;
 }
