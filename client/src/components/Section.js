@@ -128,15 +128,15 @@ function SectionTest(props) {
           </div>
 
           <div>
-            {/* <video
+            <video
               width="100%"
-              autoplay="autoplay"
+              autoPlay="autoplay"
               loop="loop"
               // controls="controls"
               muted="muted"
             >
               <source src="./videos/ballet-cover.mp4" type="video/mp4" />
-            </video> */}
+            </video>
           </div>
 
           {/* <div className="col2">
