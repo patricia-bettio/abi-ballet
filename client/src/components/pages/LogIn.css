@@ -1,7 +1,61 @@
 .showError {
   display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
 }
 
 .hideError {
   display: none;
+}
+
+.restrictedArea {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Old Standard TT", serif; */
+  font-size: 12px;
+}
+.restrictedArea svg {
+  margin-left: 5px;
+}
+
+.loginWrapper {
+  background-color: #f2f2f2;
+  padding: 9rem;
+  display: flex;
+  place-content: center;
+}
+
+.loginArea {
+  width: 20rem;
+}
+.loginArea h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: "ExtraLight 200";
+  font-weight: 400;
+}
+.loginArea h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.loginForm button {
+  margin-top: 1rem;
+}
+
+.inputArea {
+  padding: 5px 0;
+}
+
+.inputArea input {
+  width: 100%;
+  font-family: "Old Standard TT", serif;
+}
+.inputArea label {
+  font-family: "Montserrat", sans-serif;
 }
