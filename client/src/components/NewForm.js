@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Button } from "./Button";
+import "./NewForm.css";
 
 class NewForm extends React.Component {
   // const { label } = props;
@@ -72,8 +74,8 @@ class NewForm extends React.Component {
     return (
       <>
         {/* {console.log("final state: ", this.state)} */}
-        <div>
-          <h2>New form</h2>
+        <div id="register">
+          {/* <h2>New form</h2> */}
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <label>
@@ -136,7 +138,9 @@ class NewForm extends React.Component {
               onChange={handleChange}
             ></textarea>
           </div> */}
-            <button>Submit NEW</button>
+            <Button buttonSize="btn--wide" buttonColor="blue">
+              Submit
+            </Button>
           </form>
         </div>
       </>

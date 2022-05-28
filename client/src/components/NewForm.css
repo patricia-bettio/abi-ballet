@@ -1,0 +1,22 @@
+form {
+  width: 300px;
+}
+
+.form-input {
+  padding: 10px 0 0;
+}
+
+.form-input:last-of-type {
+  padding-bottom: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-family: "Old Standard TT", serif;
+}
+
+input {
+  border: none;
+  padding: 5px 0;
+}
