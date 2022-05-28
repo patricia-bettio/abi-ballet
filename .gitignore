@@ -7,6 +7,8 @@ node_modules
 /.pnp
 .pnp.js
 
+client/public/images
+client/public/videos
 # testing
 /coverage
 
