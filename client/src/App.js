@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Menu from "./components/Menu";
 import Admin from "./components/pages/Admin";
+import LogIn from "./components/pages/LogIn";
 import Footer from "./components/pages/footer/Footer";
 import {
   BrowserRouter as Router,
@@ -38,6 +39,7 @@ class App extends React.Component {
             {/* <Route path='/' exact component={Home}/> */}
             <Route path="/" element={<Home />} />
             <Route path="/Admin" element={<Admin />} />
+            <Route path="/Login" element={<LogIn />} />
             {/* <Route path="/">
             <Home />
           </Route> */}
