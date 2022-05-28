@@ -6,7 +6,7 @@ import { HorizontalDivider, VerticalDivider } from "./Dividers";
 import { Link } from "react-router-dom";
 import "./Section.css";
 import { NewForm } from "./NewForm";
-import Image from "react-bootstrap/Image";
+// import Image from "react-bootstrap/Image";
 
 function Section(props) {
   const {
@@ -75,7 +75,7 @@ function Section(props) {
                 <img src={img} alt={alt} className="home__hero-img" />
               </div> */}
               <div>
-                <Image
+                <img
                   src={img}
                   alt={alt}
                   className="img-fluid shadow-2-strong"
@@ -190,7 +190,7 @@ function SectionTest2(props) {
 
           <div className="col2">
             <div>
-              <Image
+              <img
                 src="./images/teacher1.jpg"
                 alt="propsalt"
                 // className="home__hero-img"
