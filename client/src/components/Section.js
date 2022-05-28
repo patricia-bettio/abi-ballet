@@ -92,7 +92,7 @@ function Section(props) {
 function SectionTest(props) {
   return (
     <>
-      <div className={"home_hero-section darkBg"}>
+      <div className={"home_hero-section darkBg"} id="home">
         <div
           className="rowVideo home__hero-row"
           style={{ display: "flex", flexDirection: "row" }}

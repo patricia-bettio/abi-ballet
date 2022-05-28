@@ -7,3 +7,9 @@
 .body-wrapper {
   margin: 0 50px;
 }
+
+@media screen and (max-width: 960px) {
+  .body-wrapper {
+    margin: 0;
+  }
+}
