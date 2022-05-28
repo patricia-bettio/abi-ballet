@@ -1,31 +1,27 @@
 import React from "react";
-import { Section, SectionTest } from "../../Section";
-import Pricing from "../../Pricing";
-import { NewForm } from "../../NewForm";
-import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
-  homeObjFour,
-  homeObjFive,
-  homeObjSix,
-} from "./Data";
+// import { TopGrid } from "../../Dividers";
+import { Section, SectionTest, SectionTest2 } from "../../Section";
+import { homeObjTwo, homeObjSix } from "./Data";
+// import { Gallery } from "../../Gallery";
+// import Gallery from "../../Gallery";
+// import ContactForm from "../../ContactForm";
 // import Background from '../../../../public/images'
 
 function Home() {
   return (
     <>
+      {/* <TopGrid /> */}
       <SectionTest name={"Pat"} {...homeObjSix} />
-      <div>
+      <Section {...homeObjTwo} />
+      <SectionTest2 withForm />
+      {/* <div>
         <Section {...homeObjTwo} />
         <NewForm label={"name"} />
-      </div>
-      <Section withForm label={["Name"]} label2={"Phone"} {...homeObjFive} />
-      <Section withForm label={"Phone"} {...homeObjOne} />
-      <Pricing />
-      <Section {...homeObjTwo} />
-      <Section {...homeObjThree} />
-      <Section {...homeObjFour} />
+      </div> */}
+      {/* <Gallery /> */}
+      {/* <ContactForm /> */}
+      {/* <Section withForm label={"Phone"} {...homeObjOne} />
+      <Section {...homeObjThree} /> */}
     </>
   );
 }

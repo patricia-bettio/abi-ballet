@@ -5,6 +5,8 @@ import { Form } from "./Forms";
 import { HorizontalDivider, VerticalDivider } from "./Dividers";
 import { Link } from "react-router-dom";
 import "./Section.css";
+import { NewForm } from "./NewForm";
+import Image from "react-bootstrap/Image";
 
 function Section(props) {
   const {
@@ -15,7 +17,7 @@ function Section(props) {
     headline,
     description,
     subdescription,
-    buttonLabel,
+    // buttonLabel,
     img,
     alt,
     imgStart,
@@ -26,6 +28,7 @@ function Section(props) {
     <>
       <div
         className={lightBg ? "home_hero-section" : "hero__hero-section darkBg"}
+        id="about"
       >
         <div>
           <div
@@ -38,7 +41,7 @@ function Section(props) {
             <div className="col">
               <div className="home__hero-text-wrapper">
                 <div className="top-line">{topLine}</div>
-                <h2 className={lightText ? "heading" : "heading dark"}>
+                <h2 className={lightText ? "heading2" : "heading2 dark"}>
                   {headline}
                 </h2>
 
@@ -58,18 +61,25 @@ function Section(props) {
                 <HorizontalDivider />
                 <p className="subheading">{subdescription}</p>
 
-                <Link to="/sign-up">
+                {/* <Link to="/sign-up">
                   {buttonLabel && (
                     <Button buttonSize="btn-medium" buttonColor="blue">
                       {buttonLabel}
                     </Button>
                   )}
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div className="col">
-              <div className="home__hero-img-wrapper">
+              {/* <div className="home__hero-img-wrapper">
                 <img src={img} alt={alt} className="home__hero-img" />
+              </div> */}
+              <div>
+                <Image
+                  src={img}
+                  alt={alt}
+                  className="img-fluid shadow-2-strong"
+                />
               </div>
             </div>
           </div>
@@ -84,7 +94,7 @@ function SectionTest(props) {
     <>
       <div className={"home_hero-section darkBg"}>
         <div
-          className="row2 home__hero-row"
+          className="rowVideo home__hero-row"
           style={{ display: "flex", flexDirection: "row" }}
         >
           <div className="col">
@@ -116,12 +126,76 @@ function SectionTest(props) {
               </Link>
             </div>
           </div>
-          <div className="col2">
+
+          <div>
+            {/* <video
+              width="100%"
+              autoplay="autoplay"
+              loop="loop"
+              // controls="controls"
+              muted="muted"
+            >
+              <source src="./videos/ballet-cover.mp4" type="video/mp4" />
+            </video> */}
+          </div>
+
+          {/* <div className="col2">
             <div className="home__hero-img-wrapper">
               <img src={props.img} alt={props.alt} className="home__hero-img" />
             </div>
             <div className="home__hero-img-wrapper">
               <img src={props.img} alt={props.alt} className="home__hero-img" />
+            </div>
+          </div> */}
+        </div>
+      </div>
+      {/* <TopGrid /> */}
+    </>
+  );
+}
+
+function SectionTest2(props) {
+  return (
+    <>
+      <div className={"home_hero-section darkBg"}>
+        <div className="row home__hero-row">
+          <div className="col">
+            <div className="home__hero-text-wrapper">
+              <h1 className={props.lightText ? "heading2" : "heading2 dark"}>
+                Join the studio
+              </h1>
+
+              <HorizontalDivider />
+              <p
+                className={
+                  props.lightTextDesc
+                    ? "home__hero-subtitle"
+                    : "home__hero-subtitle dark"
+                }
+              >
+                {" "}
+                Please fill out the form. Each case is analyzed individually and
+                new students will be contacted after registration.
+              </p>
+
+              <NewForm />
+
+              {/* <Link to="/sign-up">
+                <Button buttonSize="btn-medium" buttonColor="blue">
+                  buttonLabel
+                </Button>
+              </Link> */}
+            </div>
+          </div>
+
+          <div className="col2">
+            <div>
+              <Image
+                src="./images/teacher1.jpg"
+                alt="propsalt"
+                // className="home__hero-img"
+                className="img-fluid shadow-2-strong"
+              />
             </div>
           </div>
         </div>
@@ -130,4 +204,4 @@ function SectionTest(props) {
   );
 }
 
-export { Section, SectionTest };
+export { Section, SectionTest, SectionTest2 };
