@@ -5,6 +5,8 @@ import {
   BsXCircleFill,
   BsExclamationTriangle,
   BsTrash,
+  BsTelephone,
+  BsEnvelope,
 } from "react-icons/bs";
 import "./Admin.css";
 
@@ -23,14 +25,13 @@ class Admin extends React.Component {
 
   displayStudents = (students) => {
     return (
-      <table>
+      <table className="studentsTable">
         <tbody>
           {console.log(students)}
           <tr>
-            <th>name</th>
-            <th>age</th>
-            <th>responsible</th>
-            <th>email</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Contact information</th>
             <th>Status</th>
             <th>
               Delete <BsExclamationTriangle />
@@ -40,25 +41,34 @@ class Admin extends React.Component {
             <tr key={id}>
               <td>{student.name}</td>
               <td>{student.age}</td>
-              <td>{student.representative}</td>
-              <td>{student.email}</td>
+              <td>
+                <div>
+                  <BsEnvelope />
+                  {student.email}
+                </div>
+                <div>
+                  <BsTelephone />
+                  Phone number
+                </div>
+                <p className="representative">{student.representative}</p>
+              </td>
               {student.status === false ? (
                 <td>
-                  Inactive
                   <BsXCircleFill
                     onClick={() => {
                       this.handleStatus(student);
                     }}
                   />
+                  Inactive
                 </td>
               ) : (
                 <td>
-                  Active
                   <BsFillCheckCircleFill
                     onClick={() => {
                       this.handleStatus(student);
                     }}
                   />
+                  Active
                 </td>
               )}
               <td>
@@ -93,9 +103,10 @@ class Admin extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="studentsTable">
+        <h1>Students</h1>
         <div>{this.displayStudents(this.state.allStudents)}</div>
-      </>
+      </div>
     );
   }
 }
