@@ -58,19 +58,22 @@
 .btn--medium:hover,
 .btn--mobile:hover {
   transition: all 0.3s ease-out;
-  background: #fff;
+  background: #b2d9c5;
+  /* background: #1A525E; */
   color: #242424;
 }
 
 .btn--wide:hover {
-  color: #fff;
+  /* color: #fff; */
+  color: #b2d9c5;
   background-color: #f00946;
   transition: all 0.2s ease-out;
 }
 
 .blue {
   color: #fff;
-  background-color: #93b1c2;
+  /* background-color: #468189; */
+  background-color: #1a525e;
 }
 
 .red {
@@ -86,7 +89,8 @@
 
 .primary:hover {
   background-color: #fff;
-  color: #242424;
+  /* color: #242424; */
+  color: #b2d9c5;
   border: none;
 }
 

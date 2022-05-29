@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 50px;
+  /* margin: 10px 0 0; */
+  margin-top: auto;
   font-family: "Montserrat", sans-serif;
   color: white;
   font-style: "ExtraLight 200" !important;
@@ -82,12 +83,16 @@
 @media screen and (max-width: 820px) {
   .footer-container {
     margin: 0;
+    padding: 1rem 0 1rem 0;
   }
   .footer-info {
     padding-top: 2rem;
     flex-direction: column;
   }
 
+  .footer-logo {
+    height: 3rem;
+  }
   .btn {
     width: 100%;
   }
