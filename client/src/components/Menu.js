@@ -12,6 +12,7 @@ function Menu() {
   const handleLogOut = () => {
     localStorage.clear();
     window.location.href = "/";
+    closeMenu();
   };
 
   return (
@@ -29,7 +30,7 @@ function Menu() {
             <ul className={click ? "menu-items active" : "menu-items"}>
               <div className="menu-items-main">
                 <Link to="/" className="menu-logo">
-                  ABI Rosa Gomes
+                  ABI | Rosa Gomes
                 </Link>
                 <li className="menu-item">
                   <Link
@@ -38,6 +39,7 @@ function Menu() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#home");
+                      closeMenu();
                     }}
                   >
                     Home
@@ -50,6 +52,7 @@ function Menu() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#about");
+                      closeMenu();
                     }}
                   >
                     Classes
@@ -62,6 +65,7 @@ function Menu() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#register");
+                      closeMenu();
                     }}
                   >
                     Register
@@ -74,6 +78,7 @@ function Menu() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#gallery");
+                      closeMenu();
                     }}
                   >
                     Gallery
@@ -86,6 +91,7 @@ function Menu() {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#contact");
+                      closeMenu();
                     }}
                   >
                     Contact
@@ -109,9 +115,13 @@ function Menu() {
                   )}
                   {localStorage.getItem("user") ===
                   process.env.REACT_APP_ADMIN_USER ? (
-                    <BsPersonX onClick={handleLogOut} />
+                    <BsPersonX onClick={(handleLogOut, closeMenu)} />
                   ) : (
-                    <Link to={"/Login"} className="menu-link">
+                    <Link
+                      to={"/Login"}
+                      className="menu-link"
+                      onClick={closeMenu}
+                    >
                       <BsPerson />
                     </Link>
                   )}

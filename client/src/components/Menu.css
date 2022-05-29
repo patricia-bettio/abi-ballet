@@ -18,7 +18,7 @@
 .menu-logo-mobile {
   font-family: "Old Standard TT", serif;
   padding-right: 1rem;
-  color: #394248;
+  color: black;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.5rem;
@@ -37,7 +37,8 @@
 }
 
 .menu-item:hover {
-  border-bottom: 2px solid #1c2237;
+  /* border-bottom: 2px solid #1c2237; */
+  border-bottom: 2px solid #468189;
 }
 
 .menu-link {
@@ -108,7 +109,7 @@
   .menu-items.active {
     background: #fff;
     left: 0;
-    transition: all 0.6s ease;
+    transition: all 0.9s ease;
     top: 3rem;
   }
 

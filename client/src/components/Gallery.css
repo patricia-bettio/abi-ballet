@@ -1,0 +1,10 @@
+.galleryWrapper {
+  margin: 0 200px;
+  padding: 80px 0;
+}
+.galleryWrapper h1 {
+  font-family: "Old Standard TT", serif;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 2rem;
+}

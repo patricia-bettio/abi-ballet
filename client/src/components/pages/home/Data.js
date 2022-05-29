@@ -1,70 +1,15 @@
-export const homeObjOne = {
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: "Exclusive Access",
-  headline: "Unlimited Transactions with zero fees",
-  description:
-    "Get access to our exclusive diamond card that allows you to  send unlimited transactions without getting charged any fees",
-  buttonLabel: "Get Started",
-  imgStart: "",
-  img: "/images/svg-1.svg",
-  alt: "Credit Card",
-};
-
 export const homeObjTwo = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topLine: "100% SECURE",
-  headline: "Stay protected 24/7 anywhere anytime",
+  headline: "Ballet classes for all ages",
   description:
-    "We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime",
+    "At the studio we focus on allow all members of the community to join. We have as young as 5 years till 24. After registration, the student is invited to visit the studio and take a lesson where the teacher will be then able to assign that student accordignly. ",
   buttonLabel: "Learn More",
   imgStart: "",
-  img: "images/svg-5.svg",
+  img: "https://pbstyledk.files.wordpress.com/2022/05/grupo1.jpg",
   alt: "Vault",
-};
-
-export const homeObjThree = {
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: "EASY SETUP",
-  headline: "Super fast and simple onboarding process",
-  description:
-    "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
-  buttonLabel: "Start Now",
-  imgStart: "start",
-  img: "images/svg-7.svg",
-  alt: "Vault",
-};
-
-export const homeObjFour = {
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: "DATA ANALYTICS",
-  headline: "Every transaction is stored on our secure cloud database",
-  description:
-    "Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.",
-  buttonLabel: "Sign Up Now",
-  imgStart: "start",
-  img: "images/svg-8.svg",
-  alt: "Vault",
-};
-
-export const homeObjFive = {
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  headline: "Every transaction is stored on our secure cloud database",
-  description:
-    "Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.",
-  subdescription:
-    "Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.",
-  imgStart: "start",
-  img: "images/groupoazul.jpg",
 };
 
 export const homeObjSix = {
@@ -73,8 +18,7 @@ export const homeObjSix = {
   lightTextDesc: true,
   preheadline: "The Foundation",
   headline: "ABI Children - Classical Ballet",
-  description:
-    "Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.",
+  description: "A place where youngster can spend time and gain abilities",
   // subdescription: 'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
   // imgStart: 'start',
   buttonLabel: "Donate",

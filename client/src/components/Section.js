@@ -1,26 +1,22 @@
 import React from "react";
 import { Button } from "./Button";
 import { Form } from "./Forms";
-// import { newForm } from "./newForm";
 import { HorizontalDivider, VerticalDivider } from "./Dividers";
 import { Link } from "react-router-dom";
 import "./Section.css";
 import { NewForm } from "./NewForm";
-// import Image from "react-bootstrap/Image";
+import { EmailForm } from "./EmailForm";
 
-function Section(props) {
+function SectionText(props) {
   const {
     lightBg,
-    topLine,
     lightText,
     lightTextDesc,
     headline,
     description,
     subdescription,
-    // buttonLabel,
     img,
     alt,
-    imgStart,
     withForm,
   } = props;
 
@@ -31,24 +27,13 @@ function Section(props) {
         id="about"
       >
         <div>
-          <div
-            className="row home__hero-row"
-            style={{
-              display: "flex",
-              flexDirection: imgStart === "start" ? "row-reverse" : "row",
-            }}
-          >
+          <div className="row home__hero-row">
             <div className="col">
               <div className="home__hero-text-wrapper">
-                <div className="top-line">{topLine}</div>
                 <h2 className={lightText ? "heading2" : "heading2 dark"}>
                   {headline}
                 </h2>
-
-                {/* { withForm && <Form name={"Full name:"} field2={"emails"}/>} */}
-                {/* { withForm && <Form labe={name} field2={field2}/>} */}
                 {withForm && <Form {...props} />}
-
                 <p
                   className={
                     lightTextDesc
@@ -58,22 +43,14 @@ function Section(props) {
                 >
                   {description}
                 </p>
+                <p className="subDescription">Here there will be more info</p>
+                <br />
+                <p className="subDescription">{description}</p>
                 <HorizontalDivider />
                 <p className="subheading">{subdescription}</p>
-
-                {/* <Link to="/sign-up">
-                  {buttonLabel && (
-                    <Button buttonSize="btn-medium" buttonColor="blue">
-                      {buttonLabel}
-                    </Button>
-                  )}
-                </Link> */}
               </div>
             </div>
             <div className="col">
-              {/* <div className="home__hero-img-wrapper">
-                <img src={img} alt={alt} className="home__hero-img" />
-              </div> */}
               <div>
                 <img
                   src={img}
@@ -89,14 +66,11 @@ function Section(props) {
   );
 }
 
-function SectionTest(props) {
+function SectionVideo(props) {
   return (
     <>
       <div className={"home_hero-section darkBg"} id="home">
-        <div
-          className="rowVideo home__hero-row"
-          style={{ display: "flex", flexDirection: "row" }}
-        >
+        <div className="rowVideo home__hero-row">
           <div className="col">
             <div className="home__hero-text-wrapper">
               <div className="top-line">{props.topLine}</div>
@@ -104,7 +78,6 @@ function SectionTest(props) {
               <h1 className={props.lightText ? "heading" : "heading dark"}>
                 {props.headline}
               </h1>
-
               <VerticalDivider />
               <p
                 className={
@@ -128,28 +101,12 @@ function SectionTest(props) {
           </div>
 
           <div>
-            <video
-              width="100%"
-              autoPlay="autoplay"
-              loop="loop"
-              // controls="controls"
-              muted="muted"
-            >
+            <video width="100%" autoPlay="autoplay" loop="loop" muted="muted">
               <source src="./videos/ballet-cover.mp4" type="video/mp4" />
             </video>
           </div>
-
-          {/* <div className="col2">
-            <div className="home__hero-img-wrapper">
-              <img src={props.img} alt={props.alt} className="home__hero-img" />
-            </div>
-            <div className="home__hero-img-wrapper">
-              <img src={props.img} alt={props.alt} className="home__hero-img" />
-            </div>
-          </div> */}
         </div>
       </div>
-      {/* <TopGrid /> */}
     </>
   );
 }
@@ -179,21 +136,14 @@ function SectionTest2(props) {
               </p>
 
               <NewForm />
-
-              {/* <Link to="/sign-up">
-                <Button buttonSize="btn-medium" buttonColor="blue">
-                  buttonLabel
-                </Button>
-              </Link> */}
             </div>
           </div>
 
-          <div className="col2">
+          <div className="col">
             <div>
               <img
-                src="./images/teacher1.jpg"
+                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
                 alt="propsalt"
-                // className="home__hero-img"
                 className="img-fluid shadow-2-strong"
               />
             </div>
@@ -204,4 +154,47 @@ function SectionTest2(props) {
   );
 }
 
-export { Section, SectionTest, SectionTest2 };
+function SectionTest3(props) {
+  return (
+    <>
+      <div className={"home_hero-section darkBg"}>
+        <div className="row home__hero-row-row">
+          <div className="col">
+            <div className="home__hero-text-wrapper">
+              <h1 className={props.lightText ? "heading2" : "heading2 dark"}>
+                Questions
+              </h1>
+
+              <HorizontalDivider />
+              <p
+                className={
+                  props.lightTextDesc
+                    ? "home__hero-subtitle"
+                    : "home__hero-subtitle dark"
+                }
+              >
+                {" "}
+                If you have any questions please let us know. Reply within 24
+                hours
+              </p>
+
+              <EmailForm />
+            </div>
+          </div>
+
+          <div className="col">
+            <div>
+              <img
+                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
+                alt="propsalt"
+                className="img-fluid shadow-2-strong"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export { SectionText, SectionVideo, SectionTest2, SectionTest3 };
