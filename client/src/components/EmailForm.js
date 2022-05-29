@@ -1,26 +1,17 @@
 import React from "react";
-// import axios from "axios";
 import { Button } from "./Button";
-// import "./NewForm.css";
+import { send } from "emailjs-com";
 
 class EmailForm extends React.Component {
-  // const { label } = props;
-
   state = {
-    //   name
     name: "",
     email: "",
-    // [this.labelprops.]: "",
-    //   age
     message: "",
-    //   email
   };
 
   handleChange = ({ target }) => {
     // name and value from each input
     const { name, value } = target;
-    console.log("target", target);
-
     this.setState({
       [name]: value,
     });
@@ -31,50 +22,37 @@ class EmailForm extends React.Component {
     console.log("submit!", event);
 
     const newData = {
-      name: this.state.name,
+      from_name: this.state.name,
       message: this.state.message,
-      email: this.state.email,
+      reply_to: this.state.email,
     };
-    console.log(this.state);
-    console.log(this.state.name);
 
     console.log(newData);
 
-    // "proxy": "http://localhost:8080"
-    // axios({
-    //   url: "/api/students",
-    //   method: "POST",
-    //   data: newData,
-    // })
-    //   .then(() => {
-    //     console.log("it worked!!data sent");
-    //     this.resetForm();
-    //   })
-    //   .catch(() => {
-    //     console.log("ops data was not sent!");
-    //   });
-  };
-
-  resetForm = () => {
-    // this.setState(this.state);
-    // TODO
-    // reset form
-    // console.log(this.state);
-    // console.log(this.state.name);
-    // this.setState({
-    //   [this.state.name]: "",
-    // });
+    send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID, //service id
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID, //template id
+      newData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY //public key
+    )
+      .then((response) => {
+        console.log("Message sent!", response.status, response.text);
+        this.setState({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        console.log("Ops smt went wrong...", err);
+      });
   };
 
   render() {
     console.log("Current form state:", this.state);
-    // console.log("Current form state:", this.state.name);
-
     return (
       <>
-        {/* {console.log("final state: ", this.state)} */}
         <div id="message">
-          {/* <h2>New form</h2> */}
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <label>
@@ -104,26 +82,16 @@ class EmailForm extends React.Component {
             <div className="form-input">
               <label>
                 Message
-                <input
-                  type="text"
+                <textarea
+                  type="textarea"
                   placeholder="What is your question?"
                   name="message"
+                  rows="4"
                   value={this.state.message}
                   onChange={this.handleChange}
                 />
               </label>
             </div>
-
-            {/* <div className="form-input">
-            <textarea
-              name={label1}
-              placeholder="body!"
-              cols="30"
-              rows="10"
-              vaue={state.body}
-              onChange={handleChange}
-            ></textarea>
-          </div> */}
             <Button buttonSize="btn--wide" buttonColor="blue">
               Submit
             </Button>

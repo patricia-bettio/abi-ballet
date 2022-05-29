@@ -90,7 +90,7 @@ function Menu() {
                     className="menu-link"
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.replace("/#contact");
+                      window.location.replace("/#message");
                       closeMenu();
                     }}
                   >
@@ -115,7 +115,7 @@ function Menu() {
                   )}
                   {localStorage.getItem("user") ===
                   process.env.REACT_APP_ADMIN_USER ? (
-                    <BsPersonX onClick={(handleLogOut, closeMenu)} />
+                    <BsPersonX onClick={handleLogOut} />
                   ) : (
                     <Link
                       to={"/Login"}

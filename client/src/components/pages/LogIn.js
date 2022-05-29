@@ -31,21 +31,23 @@ const LogIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, password);
-
-    console.log(user === ADMIN_USER);
-    console.log(password === ADMIN_PASS);
     if (user === ADMIN_USER && password === ADMIN_PASS) {
-      setUser("");
-      setPass("");
       setError(false);
       setLogged(true);
       localStorage.setItem("user", ADMIN_USER);
     } else {
-      // TODO: display error
+      // setUser("");
+      // setPass("");
       setError(true);
       console.log(error);
     }
   };
+
+  // function ResetInput() {
+  //   // setError(true);
+  //   setUser("");
+  //   setPass("");
+  // }
 
   return (
     <>
@@ -103,7 +105,11 @@ const LogIn = () => {
                 </p>
               </div>
 
-              <Button buttonSize="btn-medium" buttonColor="blue">
+              <Button
+                buttonSize="btn-medium"
+                buttonColor="blue"
+                // onClick={ResetInput}
+              >
                 Sign in
               </Button>
             </form>
