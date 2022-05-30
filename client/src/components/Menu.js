@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsSearch, BsPerson, BsPersonX, BsList, BsX } from "react-icons/bs";
+import { BsPerson, BsPersonX, BsList, BsX } from "react-icons/bs";
 import "./Menu.css";
 import { IconContext } from "react-icons/lib";
 
@@ -105,9 +105,6 @@ function Menu() {
               </div>
 
               <div className="menu-items-right menu-link">
-                <div>
-                  <BsSearch />
-                </div>
                 <div>
                   {console.log(
                     localStorage.getItem("user") ===

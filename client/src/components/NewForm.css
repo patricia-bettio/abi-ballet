@@ -13,10 +13,24 @@
 label {
   display: flex;
   flex-direction: column;
-  font-family: "Old Standard TT", serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 input {
   border: none;
+  font-family: "Old Standard TT", serif;
   padding: 5px 0;
+}
+
+.showError,
+.showSuccess {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.hideError,
+.hideSuccess {
+  display: none;
 }

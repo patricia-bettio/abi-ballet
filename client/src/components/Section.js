@@ -23,11 +23,11 @@ function SectionText(props) {
   return (
     <>
       <div
-        className={lightBg ? "home_hero-section" : "hero__hero-section darkBg"}
+        className={lightBg ? "hero__hero-section darkBg" : "home_hero-section"}
         id="about"
       >
         <div>
-          <div className="row home__hero-row">
+          <div className="row home__hero-row-row">
             <div className="col">
               <div className="home__hero-text-wrapper">
                 <h2 className={lightText ? "heading2" : "heading2 dark"}>
@@ -100,10 +100,30 @@ function SectionVideo(props) {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <video width="100%" autoPlay="autoplay" loop="loop" muted="muted">
-              <source src="./videos/ballet-cover.mp4" type="video/mp4" />
+              <source
+                src="https://www.youtube.com/embed/abp0mfFDfWM"
+                type="video/mp4"
+              />
             </video>
+            {/* <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/abp0mfFDfWM?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe> */}
+          <div className="col">
+            <div>
+              <img
+                src="https://pbstyledk.files.wordpress.com/2022/05/grupo1.jpg"
+                alt="propsalt"
+                className="img-fluid shadow-2-strong"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -185,7 +205,8 @@ function SectionTest3(props) {
           <div className="col">
             <div>
               <img
-                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
+                // src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
+                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-frente.jpg"
                 alt="propsalt"
                 className="img-fluid shadow-2-strong"
               />
