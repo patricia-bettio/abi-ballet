@@ -4,78 +4,74 @@ import { Button } from "./Button";
 import "./NewForm.css";
 
 class NewForm extends React.Component {
-  // const { label } = props;
-
   state = {
-    //   name
     name: "",
     representative: "",
-    // [this.labelprops.]: "",
-    //   age
     age: "",
     email: "",
-    //   email
+    error: "",
+    success: "",
   };
 
   handleChange = ({ target }) => {
     // name and value from each input
+    //error state
     const { name, value } = target;
-    console.log("target", target);
-
     this.setState({
       [name]: value,
+      error: false,
+      success: false,
     });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("submit!", event);
 
-    const newData = {
-      name: this.state.name,
-      representative: this.state.representative,
-      age: this.state.age,
-      email: this.state.email,
-    };
-    // console.log(this.state);
-    // console.log(this.state.name);
+    //VERIFY AGAINST THE DB
+    axios.get("/api").then((res) => {
+      const allEmails = res.data.map((res) => res.email);
 
-    console.log(newData);
-    // "proxy": "http://localhost:8080"
-    axios({
-      url: "/api/students",
-      method: "POST",
-      data: newData,
-    })
-      .then(() => {
-        console.log("it worked!!data sent");
-        this.resetForm();
-      })
-      .catch(() => {
-        console.log("ops data was not sent!");
-      });
-  };
-
-  resetForm = () => {
-    // this.setState(this.state);
-    // TODO
-    // reset form
-    // console.log(this.state);
-    // console.log(this.state.name);
-    // this.setState({
-    //   [this.state.name]: "",
-    // });
+      if (allEmails.includes(this.state.email)) {
+        this.setState({
+          error: true,
+        });
+      } else {
+        const newData = {
+          name: this.state.name,
+          representative: this.state.representative,
+          age: this.state.age,
+          email: this.state.email,
+        };
+        // SEND FORM
+        axios({
+          url: "/api/students",
+          method: "POST",
+          data: newData,
+        })
+          .then(() => {
+            console.log("it worked!!data sent");
+            this.setState({
+              name: "",
+              representative: "",
+              age: "",
+              email: "",
+              error: false,
+              success: true,
+            });
+          })
+          .catch(() => {
+            console.log("ops data was not sent!");
+          });
+      }
+    });
   };
 
   render() {
     console.log("Current form state:", this.state);
-    // console.log("Current form state:", this.state.name);
 
     return (
       <>
-        {/* {console.log("final state: ", this.state)} */}
         <div id="register">
-          {/* <h2>New form</h2> */}
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <label>
@@ -86,6 +82,7 @@ class NewForm extends React.Component {
                   name="name"
                   value={this.state.name}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
             </div>
@@ -99,6 +96,7 @@ class NewForm extends React.Component {
                   name="age"
                   value={this.state.age}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
             </div>
@@ -107,13 +105,21 @@ class NewForm extends React.Component {
               <label>
                 Email
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter your email"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
+              <div className={this.state.error ? "showError" : "hideError"}>
+                <p>This email has already been registered.</p>
+                <p>
+                  Please contact us if you don't remember having registered
+                  before.
+                </p>
+              </div>
             </div>
             <div className="form-input">
               <label>
@@ -127,20 +133,13 @@ class NewForm extends React.Component {
                 />
               </label>
             </div>
-
-            {/* <div className="form-input">
-            <textarea
-              name={label1}
-              placeholder="body!"
-              cols="30"
-              rows="10"
-              vaue={state.body}
-              onChange={handleChange}
-            ></textarea>
-          </div> */}
             <Button buttonSize="btn--wide" buttonColor="blue">
               Submit
             </Button>
+            <div className={this.state.success ? "showSuccess" : "hideSuccess"}>
+              Thank you! We are looking forward to meeting you, you will be
+              contacted within 48h.
+            </div>
           </form>
         </div>
       </>

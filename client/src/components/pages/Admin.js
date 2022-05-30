@@ -9,6 +9,7 @@ import {
   BsEnvelope,
 } from "react-icons/bs";
 import "./Admin.css";
+import { NewForm } from "../NewForm";
 
 class Admin extends React.Component {
   state = {
@@ -55,6 +56,7 @@ class Admin extends React.Component {
               {student.status === false ? (
                 <td>
                   <BsXCircleFill
+                    color="darkred"
                     onClick={() => {
                       this.handleStatus(student);
                     }}
@@ -64,6 +66,7 @@ class Admin extends React.Component {
               ) : (
                 <td>
                   <BsFillCheckCircleFill
+                    color="darkgreen"
                     onClick={() => {
                       this.handleStatus(student);
                     }}
@@ -101,11 +104,23 @@ class Admin extends React.Component {
     this.componentDidMount();
   };
 
+  handleNew = () => {
+    console.log("student");
+  };
+
   render() {
     return (
       <div className="studentsTable">
-        <h1>Students</h1>
-        <div>{this.displayStudents(this.state.allStudents)}</div>
+        <h1>Teacher area</h1>
+
+        <div className="sectionWrapper">
+          <h2>Add new student:</h2>
+          <NewForm />
+        </div>
+        <div className="sectionWrapper">
+          <h2>All students:</h2>
+          <div>{this.displayStudents(this.state.allStudents)}</div>
+        </div>
       </div>
     );
   }

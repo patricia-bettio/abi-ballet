@@ -4,8 +4,24 @@
   padding: 2rem 0;
 }
 
+.studentsTable form {
+  display: flex;
+  /* place-content: space-between; */
+  place-content: flex-start;
+}
+.studentsTable form button {
+  place-self: flex-end;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.sectionWrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .studentsTable th {
-  border: 1px solid #ddd;
   padding: 8px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -14,7 +30,6 @@
   text-align: left;
   background-color: #468189;
   font-family: "Montserrat", sans-serif;
-  /* font-weight: 400; */
   color: white;
   text-align: center;
 }
@@ -24,6 +39,10 @@
   padding: 8px;
   font-family: "Montserrat", sans-serif;
   /* font-weight: 400; */
+}
+
+.studentsTable td svg {
+  margin-right: 5px;
 }
 
 .studentsTable tr:nth-child(even) {
@@ -41,4 +60,49 @@
 }
 .representative {
   font-weight: 400;
+}
+
+/* .showError {
+  display: block;
+}
+
+.hideError {
+  display: none;
+} */
+
+@media screen and (max-width: 991px) {
+  .studentsTable {
+    padding: 1rem;
+  }
+
+  .studentsTable form {
+    display: block;
+    padding: 20px;
+  }
+
+  .sectionWrapper:nth-of-type(1) #register {
+    background-color: #fcfbfb;
+  }
+  .studentsTable form button {
+    margin-left: 0;
+    width: auto;
+  }
+  .studentsTable h2 {
+    margin: 0 0 20px;
+  }
+  .studentsTable h1 {
+    margin: 0 0 1rem;
+  }
+  .sectionWrapper {
+    margin: 0 0 40px;
+  }
+
+  .studentsTable td,
+  .studentsTable th {
+    display: block;
+    border: none !important;
+  }
+  .studentsTable tr:nth-of-type(1) {
+    display: none;
+  }
 }

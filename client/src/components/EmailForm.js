@@ -63,6 +63,7 @@ class EmailForm extends React.Component {
                   name="name"
                   value={this.state.name}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
             </div>
@@ -71,11 +72,12 @@ class EmailForm extends React.Component {
               <label>
                 Email
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter your email"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
             </div>
@@ -89,6 +91,7 @@ class EmailForm extends React.Component {
                   rows="4"
                   value={this.state.message}
                   onChange={this.handleChange}
+                  required
                 />
               </label>
             </div>

@@ -179,6 +179,7 @@ img {
   .row {
     margin: 0;
     padding: 0;
+    flex-direction: column;
   }
 
   .home__hero-text-wrapper {

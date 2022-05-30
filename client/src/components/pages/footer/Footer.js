@@ -18,24 +18,38 @@ function Footer() {
           <div className="footer-link-items">
             <h3>Our partners</h3>
             <div>
-              <Link to="/">
-                <img className="footer-logo" src="./images/cwbFC.png" />
-              </Link>
-              <Link to="/">
-                <img className="footer-logo" src="./images/prefeitura.png" />
+              <a
+                href="http://www.fundacaoculturaldecuritiba.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="footer-logo"
+                  src="https://pbstyledk.files.wordpress.com/2022/05/cwbfc.png"
+                  alt="CWB Logo"
+                />
+              </a>
+              <Link to="https://www.curitiba.pr.gov.br/">
+                <img
+                  className="footer-logo"
+                  src="https://pbstyledk.files.wordpress.com/2022/05/prefeitura.png"
+                  target="_blank"
+                  alt="CWB Hall Logo"
+                  rel="noopener noreferrer"
+                />
               </Link>
             </div>
           </div>
 
           <div className="footer-link-items">
             <h3>Contact us</h3>
-            <p>Phone: 4545454545</p>
-            <p>email@email.com</p>
+            <p>Phone: +55 41 9997-4578</p>
+            <p>tiarosagomes@gmail.com</p>
           </div>
 
           <div className="footer-link-items">
             <h3>Find us</h3>
-            <p>Address street 45</p>
+            <p>Address to be announced</p>
             <p>Curitiba/PR</p>
             <Link to="/">Map</Link>
           </div>
@@ -52,6 +66,7 @@ function Footer() {
               to="/"
               target="_blank"
               aria-label="Facebook"
+              rel="noopener noreferrer"
             >
               <BsFacebook />
             </Link>
@@ -60,17 +75,18 @@ function Footer() {
               to="/"
               target="_blank"
               aria-label="Instagram"
+              rel="noopener noreferrer"
             >
               <BsInstagram />
             </Link>
-            <Link
-              className="social-icon-link"
-              to={"/"}
+            <a
+              href="https://www.youtube.com/channel/UCt3j9QYKfYZl6zNznFZBwZA"
               target="_blank"
-              aria-label="Youtube"
+              aria-label="YouTube"
+              rel="noopener noreferrer"
             >
               <BsYoutube />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
