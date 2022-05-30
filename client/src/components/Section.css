@@ -1,3 +1,15 @@
+.testCase {
+  background-image: url("https://pbstyledk.files.wordpress.com/2022/05/menino-grupo.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
 .home__hero-section {
   color: #fff;
   padding: 160px 0;
@@ -176,6 +188,10 @@ img {
     flex-direction: column-reverse;
   }
 
+  .rowVideo {
+    padding: 0;
+  }
+
   .row {
     margin: 0;
     padding: 0;
@@ -183,13 +199,18 @@ img {
   }
 
   .home__hero-text-wrapper {
-    padding-bottom: 65px;
+    padding-bottom: 1rem;
   }
 
   .heading {
     margin: 0;
     font-size: 2rem;
   }
+
+  .heading2 {
+    margin: 1rem 0;
+  }
+
   .col {
     max-width: 100%;
     flex-basis: 100%;

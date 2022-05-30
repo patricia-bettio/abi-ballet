@@ -51,6 +51,7 @@ function SectionText(props) {
               </div>
             </div>
             <div className="col">
+              {/* esse div dar essa classe p prallax */}
               <div>
                 <img
                   src={img}
