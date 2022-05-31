@@ -1,22 +1,17 @@
 import React from "react";
-import {
-  SectionText,
-  SectionVideo,
-  SectionTest2,
-  SectionTest3,
-} from "../../Section";
-import { homeObjTwo, homeObjSix } from "./Data";
+import { SectionVideo, SectionSplit } from "../../Section";
+import { aboutData, videoData, registerData, contactData } from "./Data";
 import { imagesData } from "../data/galleryData";
 import { Gallery } from "../../Gallery";
 
 function Home() {
   return (
     <>
-      <SectionVideo name={"Pat"} {...homeObjSix} />
-      <SectionText {...homeObjTwo} />
-      <SectionTest2 withForm />
+      <SectionVideo {...videoData} />
+      <SectionSplit {...aboutData} />
+      <SectionSplit withRegisterForm {...registerData} />
       <Gallery {...imagesData} />
-      <SectionTest3 withForm />
+      <SectionSplit withEmailForm {...contactData} />
     </>
   );
 }

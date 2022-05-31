@@ -96,7 +96,7 @@ class EmailForm extends React.Component {
               </label>
             </div>
             <Button buttonSize="btn--wide" buttonColor="blue">
-              Submit
+              Send
             </Button>
           </form>
         </div>

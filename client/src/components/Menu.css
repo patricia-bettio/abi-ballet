@@ -21,7 +21,7 @@
   color: black;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .menu-items {
@@ -44,6 +44,7 @@
 .menu-link {
   font-family: "Montserrat", sans-serif;
   font-style: "ExtraLight 200";
+  font-size: 18px;
   color: #394248;
   display: flex;
   align-items: center;
