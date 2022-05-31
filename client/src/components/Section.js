@@ -1,80 +1,17 @@
 import React from "react";
 import { Button } from "./Button";
-import { Form } from "./Forms";
 import { HorizontalDivider, VerticalDivider } from "./Dividers";
 import { Link } from "react-router-dom";
 import "./Section.css";
 import { NewForm } from "./NewForm";
 import { EmailForm } from "./EmailForm";
-
-function SectionText(props) {
-  const {
-    lightBg,
-    lightText,
-    lightTextDesc,
-    headline,
-    description,
-    subdescription,
-    img,
-    alt,
-    withForm,
-  } = props;
-
-  return (
-    <>
-      <div
-        className={lightBg ? "hero__hero-section darkBg" : "home_hero-section"}
-        id="about"
-      >
-        <div>
-          <div className="row home__hero-row-row">
-            <div className="col">
-              <div className="home__hero-text-wrapper">
-                <h2 className={lightText ? "heading2" : "heading2 dark"}>
-                  {headline}
-                </h2>
-                {withForm && <Form {...props} />}
-                <p
-                  className={
-                    lightTextDesc
-                      ? "home__hero-subtitle"
-                      : "home__hero-subtitle dark"
-                  }
-                >
-                  {description}
-                </p>
-                <p className="subDescription">
-                  Currently they pay R$55 monthly to have classes 2x per week
-                  via the city hall.
-                </p>
-                <br />
-                <p className="subDescription">{description}</p>
-                <HorizontalDivider />
-                <p className="subheading">{subdescription}</p>
-              </div>
-            </div>
-            <div className="col">
-              {/* esse div dar essa classe p prallax */}
-              <div>
-                <img
-                  src={img}
-                  alt={alt}
-                  className="img-fluid shadow-2-strong"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+import { BsPersonPlus } from "react-icons/bs";
 
 function SectionVideo(props) {
   return (
     <>
-      <div className={"home_hero-section darkBg"} id="home">
-        <div className="rowVideo home__hero-row">
+      <div className={"darkBg"} id="home">
+        <div className="rowVideo VideoAreaWrapper">
           <div className="col">
             <div className="home__hero-text-wrapper">
               <div className="top-line">{props.topLine}</div>
@@ -90,16 +27,13 @@ function SectionVideo(props) {
                     : "home__hero-subtitle dark"
                 }
               >
-                {" "}
                 {props.name} {props.description}
               </p>
 
               <Link to="/sign-up">
-                {props.buttonLabel && (
-                  <Button buttonSize="btn-medium" buttonColor="blue">
-                    {props.buttonLabel}
-                  </Button>
-                )}
+                <Button buttonSize="btn-medium" buttonColor="blue">
+                  Donate
+                </Button>
               </Link>
             </div>
           </div>
@@ -135,39 +69,45 @@ function SectionVideo(props) {
   );
 }
 
-function SectionTest2(props) {
+function SectionSplit(props) {
   return (
     <>
-      <div className={"home_hero-section darkBg"}>
-        <div className="row home__hero-row">
+      {console.log(props.lightBg)}
+      <div
+        className={
+          props.lightBg
+            ? "imageSplitWrapper lightBg"
+            : "imageSplitWrapper darkBg "
+        }
+      >
+        <div
+          className={
+            props.reverse ? "row imageSplit reverseRow" : "row imageSplit"
+          }
+        >
           <div className="col">
             <div className="home__hero-text-wrapper">
               <h1 className={props.lightText ? "heading2" : "heading2 dark"}>
-                Join the studio
+                {props.headline}
               </h1>
-
               <HorizontalDivider />
-              <p
-                className={
-                  props.lightTextDesc
-                    ? "home__hero-subtitle"
-                    : "home__hero-subtitle dark"
-                }
-              >
-                {" "}
-                Please fill out the form. Each case is analyzed individually and
-                new students will be contacted after registration.
-              </p>
-
-              <NewForm />
+              <p className="home__hero-subtitle">{props.description}</p>
+              {props.description2 && (
+                <p className="home__hero-subtitle">{props.description2}</p>
+              )}
+              {props.description3 && (
+                <p className="home__hero-subtitle">{props.description3}</p>
+              )}
+              {props.withRegisterForm && <NewForm />}
+              {props.withEmailForm && <EmailForm />}
             </div>
           </div>
 
           <div className="col">
             <div>
               <img
-                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
-                alt="propsalt"
+                src={props.img}
+                alt={props.alt}
                 className="img-fluid shadow-2-strong"
               />
             </div>
@@ -178,48 +118,4 @@ function SectionTest2(props) {
   );
 }
 
-function SectionTest3(props) {
-  return (
-    <>
-      <div className={"home_hero-section darkBg"}>
-        <div className="row home__hero-row-row">
-          <div className="col">
-            <div className="home__hero-text-wrapper">
-              <h1 className={props.lightText ? "heading2" : "heading2 dark"}>
-                Questions
-              </h1>
-
-              <HorizontalDivider />
-              <p
-                className={
-                  props.lightTextDesc
-                    ? "home__hero-subtitle"
-                    : "home__hero-subtitle dark"
-                }
-              >
-                {" "}
-                If you have any questions please let us know. Reply within 24
-                hours
-              </p>
-
-              <EmailForm />
-            </div>
-          </div>
-
-          <div className="col">
-            <div>
-              <img
-                // src="https://pbstyledk.files.wordpress.com/2022/05/rosa-aluna-1.jpg"
-                src="https://pbstyledk.files.wordpress.com/2022/05/rosa-frente.jpg"
-                alt="propsalt"
-                className="img-fluid shadow-2-strong"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-export { SectionText, SectionVideo, SectionTest2, SectionTest3 };
+export { SectionVideo, SectionSplit };

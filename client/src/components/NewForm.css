@@ -18,9 +18,9 @@ label {
 }
 
 input {
-  border: none;
+  border: 1px solid #f2f2f2;
   font-family: "Old Standard TT", serif;
-  padding: 5px 0;
+  padding: 5px;
 }
 
 .showError,

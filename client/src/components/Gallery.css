@@ -96,6 +96,7 @@
 
   .galleryWrapper {
     margin: 1rem;
+    padding: 0;
   }
 
   .image-item {
