@@ -43,7 +43,10 @@ function SectionText(props) {
                 >
                   {description}
                 </p>
-                <p className="subDescription">Here there will be more info</p>
+                <p className="subDescription">
+                  Currently they pay R$55 monthly to have classes 2x per week
+                  via the city hall.
+                </p>
                 <br />
                 <p className="subDescription">{description}</p>
                 <HorizontalDivider />
