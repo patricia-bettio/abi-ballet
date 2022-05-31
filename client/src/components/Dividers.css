@@ -17,7 +17,12 @@
 
 .vertical-border {
   border-left: 1px solid black;
-  height: 12rem;
+  height: 8rem;
+}
+
+.galleryBorder {
+  border-bottom: 1px solid white;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

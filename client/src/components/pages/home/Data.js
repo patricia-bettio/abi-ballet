@@ -21,7 +21,7 @@ export const homeObjSix = {
   preheadline: "The Foundation",
   headline: "ABI Children - Classical Ballet",
   description:
-    "A place where youngster can spend time and gain abilities. Help us achieve our goal for the yearly maintenace of the studio and support around 200 students",
+    "“It's hard to see a girl who has the conditions to be a great dancer and see her give up due to lack of money. If I could, I would teach everyone who comes here. But the room doesn't hold. My dream is to have a place where I can form several classes, in the morning and in the afternoon” - Rosa Gomes",
   // subdescription: 'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
   // imgStart: 'start',
   buttonLabel: "Donate",

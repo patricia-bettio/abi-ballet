@@ -1,5 +1,4 @@
 import React from "react";
-// import { TopGrid } from "../../Dividers";
 import {
   SectionText,
   SectionVideo,
@@ -7,26 +6,17 @@ import {
   SectionTest3,
 } from "../../Section";
 import { homeObjTwo, homeObjSix } from "./Data";
-// import { Gallery } from "../../Gallery";
+import { imagesData } from "../data/galleryData";
 import { Gallery } from "../../Gallery";
-// import Background from '../../../../public/images'
 
 function Home() {
   return (
     <>
-      {/* <TopGrid /> */}
       <SectionVideo name={"Pat"} {...homeObjSix} />
       <SectionText {...homeObjTwo} />
       <SectionTest2 withForm />
-      <Gallery />
+      <Gallery {...imagesData} />
       <SectionTest3 withForm />
-      {/* <div>
-        <Section {...homeObjTwo} />
-        <NewForm label={"name"} />
-      </div> */}
-      {/* <Gallery /> */}
-      {/* <Section withForm label={"Phone"} {...homeObjOne} />
-      <Section {...homeObjThree} /> */}
     </>
   );
 }
