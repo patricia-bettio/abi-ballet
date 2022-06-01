@@ -49,5 +49,12 @@ export const imagesData = {
       alt: "Group that presented in the Mercosur Festival",
       link: "https://www.curitiba.pr.gov.br/noticias/grupo-de-bale-do-boqueirao-e-destaque-em-festival-do-mercosul/34558",
     },
+    {
+      img: "https://pbstyledk.files.wordpress.com/2022/05/boqueirao.jpg",
+      title: "Mercosur Dance Festival",
+      subtitle: "",
+      alt: "Group that presented in the Mercosur Festival",
+      link: "https://www.curitiba.pr.gov.br/noticias/grupo-de-bale-do-boqueirao-e-destaque-em-festival-do-mercosul/34558",
+    },
   ],
 };

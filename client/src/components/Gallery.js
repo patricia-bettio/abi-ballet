@@ -44,7 +44,7 @@ class Gallery extends React.Component {
 
     return (
       <div className="galleryWrapper">
-        <h1>News gallery - click to follow the link</h1>
+        <h1>News</h1>
         <div className="container">
           <div className="image-gallery">
             <div className="column">{this.displayImage(images)}</div>

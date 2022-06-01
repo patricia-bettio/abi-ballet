@@ -32,19 +32,7 @@ function Menu() {
                 <Link to="/" className="menu-logo">
                   ABI | Rosa Gomes
                 </Link>
-                <li className="menu-item">
-                  <Link
-                    to="/"
-                    className="menu-link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.replace("/#home");
-                      closeMenu();
-                    }}
-                  >
-                    Home
-                  </Link>
-                </li>
+
                 <li className="menu-item">
                   <Link
                     to="/"
@@ -55,7 +43,7 @@ function Menu() {
                       closeMenu();
                     }}
                   >
-                    Classes
+                    About us
                   </Link>
                 </li>
                 <li className="menu-item">

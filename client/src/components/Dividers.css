@@ -2,12 +2,12 @@
   display: flex;
   /* flex-direction: row-reverse; */
   align-items: center;
-  padding: 20px 0;
+  padding-bottom: 1rem;
 }
 
 .border {
   border-bottom: 1px solid black;
-  width: 200px;
+  width: 100%;
   /* margin-left: auto; */
 }
 
