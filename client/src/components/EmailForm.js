@@ -56,7 +56,7 @@ class EmailForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <label>
-                Name
+                Name*
                 <input
                   type="text"
                   placeholder="Enter your name"
@@ -70,7 +70,7 @@ class EmailForm extends React.Component {
 
             <div className="form-input">
               <label>
-                Email
+                Email*
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -83,7 +83,7 @@ class EmailForm extends React.Component {
             </div>
             <div className="form-input">
               <label>
-                Message
+                Message*
                 <textarea
                   type="textarea"
                   placeholder="What is your question?"

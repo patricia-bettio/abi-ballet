@@ -1,11 +1,11 @@
 .galleryWrapper {
-  margin: 0 20rem;
-  padding: 80px 0;
+  padding: 0 20rem 2rem;
+  background-color: white;
 }
 
 .galleryWrapper h1 {
   font-family: "Old Standard TT", serif;
-  margin-bottom: 24px;
+  padding: 4rem 0 1rem;
   font-weight: 400;
   font-size: 2rem;
 }
@@ -25,7 +25,7 @@
 
 .image-item {
   position: relative;
-  flex: 0 0 30%;
+  flex: 1 1 30%;
 }
 
 .image-item img {
@@ -97,6 +97,10 @@
   .galleryWrapper {
     margin: 1rem;
     padding: 0;
+  }
+
+  .galleryWrapper h1 {
+    padding: 1rem 0 1rem;
   }
 
   .image-item {

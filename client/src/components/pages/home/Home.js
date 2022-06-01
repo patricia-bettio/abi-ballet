@@ -1,6 +1,18 @@
 import React from "react";
-import { SectionVideo, SectionSplit } from "../../Section";
-import { aboutData, videoData, registerData, contactData } from "./Data";
+import {
+  SectionVideo,
+  SectionSplit,
+  SectionTextOnly,
+  SectionQuote,
+} from "../../Section";
+import {
+  introData,
+  // aboutData,
+  videoData,
+  registerData,
+  contactData,
+  quoteData1,
+} from "./Data";
 import { imagesData } from "../data/galleryData";
 import { Gallery } from "../../Gallery";
 
@@ -8,10 +20,12 @@ function Home() {
   return (
     <>
       <SectionVideo {...videoData} />
-      <SectionSplit {...aboutData} />
-      <SectionSplit withRegisterForm {...registerData} />
+      <SectionQuote {...quoteData1} />
+      <SectionTextOnly {...introData} />
+      {/* <SectionSplit withRegisterForm {...aboutData} /> */}
+      <SectionSplit withEmailForm {...registerData} />
       <Gallery {...imagesData} />
-      <SectionSplit withEmailForm {...contactData} />
+      <SectionSplit withRegisterForm {...contactData} />
     </>
   );
 }

@@ -75,7 +75,7 @@ class NewForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-input">
               <label>
-                Name
+                Name*
                 <input
                   type="text"
                   placeholder="Enter full name"
@@ -89,7 +89,7 @@ class NewForm extends React.Component {
 
             <div className="form-input">
               <label>
-                Age
+                Age*
                 <input
                   type="text"
                   placeholder="Enter the student age"
@@ -103,7 +103,7 @@ class NewForm extends React.Component {
 
             <div className="form-input">
               <label>
-                Email
+                Email*
                 <input
                   type="email"
                   placeholder="Enter your email"

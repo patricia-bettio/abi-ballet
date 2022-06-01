@@ -117,4 +117,7 @@
   .social-media-wrap {
     flex-direction: column-reverse;
   }
+  .website-rights {
+    margin: 1rem;
+  }
 }
