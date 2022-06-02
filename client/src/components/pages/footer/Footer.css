@@ -7,9 +7,9 @@
   align-items: center;
   /* margin: 10px 0 0; */
   margin-top: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   color: white;
-  font-style: "ExtraLight 200" !important;
 }
 
 .footer-container a {

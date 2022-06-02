@@ -5,14 +5,7 @@ import {
   SectionTextOnly,
   SectionQuote,
 } from "../../Section";
-import {
-  introData,
-  // aboutData,
-  videoData,
-  registerData,
-  contactData,
-  quoteData1,
-} from "./Data";
+import { introData, videoData, contactData, quoteData1 } from "./Data";
 import { imagesData } from "../data/galleryData";
 import { Gallery } from "../../Gallery";
 
@@ -20,10 +13,8 @@ function Home() {
   return (
     <>
       <SectionVideo {...videoData} />
+      <SectionTextOnly withEmailForm {...introData} />
       <SectionQuote {...quoteData1} />
-      <SectionTextOnly {...introData} />
-      {/* <SectionSplit withRegisterForm {...aboutData} /> */}
-      <SectionSplit withEmailForm {...registerData} />
       <Gallery {...imagesData} />
       <SectionSplit withRegisterForm {...contactData} />
     </>

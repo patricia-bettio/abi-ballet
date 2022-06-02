@@ -73,19 +73,6 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link
-                    to="/"
-                    className="menu-link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.replace("/#message");
-                      closeMenu();
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li className="menu-item">
                   <Link to="/" className="menu-link">
                     Donate
                   </Link>
