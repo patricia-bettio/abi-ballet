@@ -11,14 +11,13 @@
   justify-content: space-around;
   z-index: 1;
   height: 55px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 4rem;
 }
 
 .menu-logo,
 .menu-logo-mobile {
   font-family: "Old Standard TT", serif;
-  padding-right: 1rem;
+  padding-right: 3rem;
   color: black;
   cursor: pointer;
   text-decoration: none;
@@ -91,6 +90,9 @@
 
   .menu-logo {
     display: none;
+  }
+  .menu-logo-mobile {
+    padding-right: 0;
   }
 }
 

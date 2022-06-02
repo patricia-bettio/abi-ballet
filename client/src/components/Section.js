@@ -43,13 +43,7 @@ function SectionVideo(props) {
             </div>
           </div>
 
-          {/* <div>
-            <video width="100%" autoPlay="autoplay" loop="loop" muted="muted">
-              <source
-                src="https://www.youtube.com/embed/abp0mfFDfWM"
-                type="video/mp4"
-              />
-            </video>
+          <div>
             {/* <iframe
               width="560"
               height="315"
@@ -58,14 +52,76 @@ function SectionVideo(props) {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-            ></iframe> */}
+            ></iframe>*/}
+          </div>
           <div className="col">
             <div>
-              <img
+              {/* <img
                 src="https://pbstyledk.files.wordpress.com/2022/05/grupo1.jpg"
                 alt="propsalt"
                 className="img-fluid shadow-2-strong"
-              />
+              /> */}
+
+              {/* <iframe
+                src={props.video}
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                // style=""
+                title="ballet-cover.mp4"
+                autoplay
+              ></iframe> */}
+
+              {/* <iframe
+                class="videoContainer__video"
+                width="640"
+                height="360"
+                src={props.video}
+                frameborder="0"
+                autoplay
+                muted
+              ></iframe> */}
+
+              {/* <video
+                src=""
+                width="640"
+                height="360"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></video> */}
+
+              <video autoPlay loop>
+                <source
+                  src="https://imgur.com/a/b0uKL9A"
+                  type="video/mp4"
+                  width="640"
+                  height="360"
+                ></source>
+              </video>
+
+              <video
+                autoPlay
+                loop
+                playsInLine
+                className="video-background"
+                muted
+              >
+                <source src={props.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div>
+                {/* <iframe
+                  src={props.video}
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                  // style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="ballet-cover.mp4"
+                  autoplay
+                ></iframe> */}
+              </div>
+              {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
             </div>
           </div>
         </div>

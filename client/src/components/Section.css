@@ -42,6 +42,14 @@
   flex-direction: row-reverse;
 }
 
+/* .VideoAreaWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
 .home-row-reverse {
   flex-direction: row-reverse;
 }

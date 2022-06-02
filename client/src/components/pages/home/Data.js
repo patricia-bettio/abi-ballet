@@ -11,6 +11,8 @@ export const videoData = {
   img: "images/grupoazul.jpg",
   alt: "test",
   reverse: "",
+  video:
+    "https://player.vimeo.com/video/716323474?h=4968dba9a6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
 };
 
 export const introData = {
