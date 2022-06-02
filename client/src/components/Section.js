@@ -5,123 +5,51 @@ import { Link } from "react-router-dom";
 import "./Section.css";
 import { NewForm } from "./NewForm";
 import { EmailForm } from "./EmailForm";
+import ReactPlayer from "react-player";
+import { BsDownload } from "react-icons/bs";
 
 function SectionVideo(props) {
   return (
     <>
-      <div
-        className={
-          props.lightBg
-            ? "imageSplitWrapper lightBg"
-            : "imageSplitWrapper darkBg "
-        }
-        id="home"
-      >
+      <div className="videoSplitWrapper" id="home">
         <div className="rowVideo VideoAreaWrapper">
           <div className="col">
-            <div className="home__hero-text-wrapper">
-              <div className="top-line">{props.topLine}</div>
-              <h4 className="preheading">{props.preheadline}</h4>
-              <h1 className={props.lightText ? "heading" : "heading dark"}>
-                {props.headline}
-              </h1>
-              <p
-                className={
-                  props.lightTextDesc
-                    ? "home__hero-subtitle"
-                    : "home__hero-subtitle dark"
-                }
-              >
-                {props.name} {props.description}
-              </p>
+            <div>
+              <div className="introWrapper">
+                <h4 className="preheading">{props.preheadline}</h4>
+                <h1 className="heading">{props.headline}</h1>
+                <p className="heroSub dark">
+                  {props.name} {props.description}
+                </p>
+              </div>
 
-              <Link to="/sign-up">
+              <Link to="/" className="donateBtn">
                 <Button buttonSize="btn-medium" buttonColor="blue">
                   Donate
+                </Button>
+              </Link>
+              <Link to="/">
+                <Button buttonSize="btn-medium" buttonColor="primary">
+                  <BsDownload />
+                  Cost estimate
                 </Button>
               </Link>
             </div>
           </div>
 
-          <div>
-            {/* <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/abp0mfFDfWM?controls=0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>*/}
-          </div>
           <div className="col">
             <div>
-              {/* <img
-                src="https://pbstyledk.files.wordpress.com/2022/05/grupo1.jpg"
-                alt="propsalt"
-                className="img-fluid shadow-2-strong"
-              /> */}
-
-              {/* <iframe
-                src={props.video}
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                // style=""
-                title="ballet-cover.mp4"
-                autoplay
-              ></iframe> */}
-
-              {/* <iframe
-                class="videoContainer__video"
-                width="640"
-                height="360"
-                src={props.video}
-                frameborder="0"
-                autoplay
-                muted
-              ></iframe> */}
-
-              {/* <video
-                src=""
-                width="640"
-                height="360"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></video> */}
-
-              <video autoPlay loop>
-                <source
-                  src="https://imgur.com/a/b0uKL9A"
-                  type="video/mp4"
-                  width="640"
-                  height="360"
-                ></source>
-              </video>
-
-              <video
-                autoPlay
-                loop
-                playsInLine
-                className="video-background"
-                muted
-              >
-                <source src={props.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div>
-                {/* <iframe
-                  src={props.video}
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                  // style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                  title="ballet-cover.mp4"
-                  autoplay
-                ></iframe> */}
-              </div>
-              {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
+              <ReactPlayer
+                autoPlay={true}
+                url={props.video}
+                loop={true}
+                muted={true}
+                controls={false}
+                playing={true}
+                config={{ vimeo: { playerOptions: { background: true } } }}
+                width="100%"
+                height="100%"
+              />
             </div>
           </div>
         </div>
@@ -141,22 +69,12 @@ function SectionSplit(props) {
             : "imageSplitWrapper darkBg "
         }
       >
-        <div
-          className={
-            props.reverse ? "row imageSplit reverseRow" : "row imageSplit"
-          }
-        >
+        <div className={props.reverse ? "imageSplit reverseRow" : "imageSplit"}>
           <div className="colText">
             <div className="home__hero-text-wrapper">
               <h1 className="heading2 dark">{props.headline}</h1>
               {props.withRegisterForm && <HorizontalDivider />}
-              <p className="home__hero-subtitle">{props.description}</p>
-              {props.description2 && (
-                <p className="home__hero-subtitle">{props.description2}</p>
-              )}
-              {props.description3 && (
-                <p className="home__hero-subtitle">{props.description3}</p>
-              )}
+              <p className="formSubtitle">{props.description}</p>
               {props.withRegisterForm && <NewForm />}
               {props.withEmailForm && <EmailForm />}
             </div>
@@ -165,11 +83,14 @@ function SectionSplit(props) {
           <div className="colImg">
             {props.replaceImg ? (
               <>
+                <div className="openQuoteWrapper">
+                  <span className="openQuote">⹂</span>
+                </div>
                 <div className="headingSecondaryText">
                   {props.secondaryText}
                 </div>
-                <div className="headingSecondaryText">
-                  {props.secondaryTextSub}
+                <div className="headingSecondarySub">
+                  ⸺ {props.secondaryTextSub}
                 </div>
               </>
             ) : (
@@ -194,6 +115,7 @@ function SectionTextOnly(props) {
             ? "imageSplitWrapper lightBg"
             : "imageSplitWrapper darkBg "
         }
+        id="about"
       >
         <div
           className={
@@ -203,28 +125,34 @@ function SectionTextOnly(props) {
           <div className="colTextOnly2">
             <div className="middleText">
               <div>
-                <h1>01.</h1>
-                <p className="home__hero-subtitle">{props.description2}</p>
+                <h1 className="introNumbers">01.</h1>
+                <p className="blocks124">{props.description2}</p>
               </div>
               <div>
-                <h1>02.</h1>
-                <p className="home__hero-subtitle">{props.description3}</p>
+                <h1 className="introNumbers">02.</h1>
+                <p className="blocks124">{props.description3}</p>
               </div>
             </div>
             <div>
-              <h1>03.</h1>
-              <p className="home__hero-subtitle">{props.description4}</p>
+              <h1 className="introNumbers">03.</h1>
+              <p className="block3">{props.description4}</p>
             </div>
-          </div>
-          <div className="colTextOnly1">
             <div className="firstText">
               <div>
-                <h1>04.</h1>
+                <h1 className="introNumbers">04.</h1>
                 <h1 className="introHeading">{props.description1}</h1>
-                <p className="home__hero-subtitle">{props.description2}</p>
+                <p className="blocks124">{props.description5}</p>
               </div>
+            </div>
+          </div>
 
-              <p className="home__hero-subtitle">{props.description3}</p>
+          <div className="colText">
+            <div className="home__hero-text-wrapper">
+              <h1 className="heading2 dark">{props.formHeader}</h1>
+              <HorizontalDivider />
+
+              <p className="formSubtitle">{props.formSub}</p>
+              {props.withEmailForm && <EmailForm />}
             </div>
           </div>
         </div>
@@ -235,22 +163,13 @@ function SectionTextOnly(props) {
 function SectionQuote(props) {
   return (
     <>
-      <div
-        className={
-          props.lightBg
-            ? "imageSplitWrapper lightBg"
-            : "imageSplitWrapper darkBg "
-        }
-      >
-        <div className="textQuote">
-          <div className="colImg">
-            <>
-              <div className="headingSecondaryText">{props.secondaryText}</div>
-              <div className="headingSecondaryText">
-                {props.secondaryTextSub}
-              </div>
-            </>
+      <div className="imageSplitWrapper lightBg quoteCenter">
+        <div className="singleQuoteWrapper">
+          <div className="openQuoteWrapper">
+            <span className="openQuote">⹂</span>
           </div>
+          <div className="headingSecondaryText">{props.secondaryText}</div>
+          <div className="headingSecondarySub">⸺ {props.secondaryTextSub}</div>
         </div>
       </div>
     </>

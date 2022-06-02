@@ -4,10 +4,10 @@
 }
 
 .galleryWrapper h1 {
-  font-family: "Old Standard TT", serif;
-  padding: 4rem 0 1rem;
+  font-family: "Cormorant Infant", serif;
   font-weight: 400;
   font-size: 2rem;
+  padding: 8rem 0 1rem;
 }
 
 .image-gallery {
@@ -49,6 +49,7 @@
   opacity: 0;
   transition: 0.5s ease;
   background-color: rgba(28, 34, 55, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 .image-item:hover .overlay {
@@ -72,7 +73,8 @@
 
 .textWrapper .imageTitle {
   padding: 0 0 15px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 16px;
 }
 

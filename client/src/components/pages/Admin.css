@@ -1,7 +1,7 @@
 .studentsTable {
   width: 100%;
   border-collapse: collapse;
-  padding: 2rem 0;
+  padding: 1rem;
 }
 
 .studentsTable form {
@@ -16,20 +16,20 @@
 }
 
 .sectionWrapper h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 18px;
 }
 
 .studentsTable th {
   padding: 8px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #468189;
-  font-family: "Montserrat", sans-serif;
+  /* background-color: #468189; */
+  background-color: #1a525e;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   color: white;
   text-align: center;
 }
@@ -37,7 +37,8 @@
 .studentsTable td {
   border: 1px solid #ddd;
   padding: 8px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   /* font-weight: 400; */
 }
 
@@ -54,9 +55,9 @@
 }
 
 .studentsTable h1 {
-  font-family: "Montserrat", sans-serif;
-  font-style: "ExtraLight 200";
+  font-family: "Cormorant Infant", serif;
   font-weight: 400;
+  font-size: 2rem;
 }
 .representative {
   font-weight: 400;
