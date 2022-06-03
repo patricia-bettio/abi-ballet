@@ -24,7 +24,7 @@ class Gallery extends React.Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      LINK to the news
+                      Direct link
                     </a>
                   </p>
                 ) : (

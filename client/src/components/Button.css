@@ -33,6 +33,10 @@
   /* font-family: "Cormorant Infant", serif; */
 }
 
+.btn--medium svg {
+  margin-right: 5px;
+}
+
 .btn--large {
   padding: 12px 26px;
   font-size: 20px;
