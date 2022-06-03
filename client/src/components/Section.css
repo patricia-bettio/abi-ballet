@@ -21,7 +21,7 @@
 }
 .textSplit {
   display: flex;
-  padding: 5rem 0;
+  padding: 4rem 0;
   gap: 3rem;
   align-items: center;
 }
@@ -32,7 +32,7 @@
 }
 
 .imageSplitWrapper:last-child {
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 .VideoAreaWrapper {
   align-items: center;
@@ -50,7 +50,8 @@
 }
 
 .rowVideo {
-  padding: 5rem 20rem 2rem;
+  padding: 3rem 16rem 0rem;
+  align-items: self-start;
   gap: 1rem;
   display: flex;
   flex-direction: row;
@@ -63,7 +64,7 @@
 }
 
 .imageSplitWrapper {
-  padding: 0 20rem;
+  padding: 0 16rem;
 }
 .videoSplitWrapper {
   padding: 0;
@@ -93,6 +94,7 @@
 
 .colImg {
   flex-basis: 50%;
+  text-align: center;
 }
 
 .col2 {
@@ -134,6 +136,7 @@
 
 .heading2 {
   /* font-family: "Cormorant Unicase", serif; */
+  padding-bottom: 5px;
   font-family: "Cormorant Infant", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -214,15 +217,13 @@
   border: 1px solid #f2f2f2;
   padding: 2rem;
 }
-.firstText {
-}
 
 .colImg img {
   max-width: 100%;
   max-height: 100%;
 }
-
-@media screen and (max-width: 991px) {
+/* MOBILE */
+@media only screen and (max-width: 576px) {
   /* @media screen and (max-width: 768px) { */
   .imageSplit {
     display: flex;
@@ -235,7 +236,7 @@
   }
 
   .rowVideo {
-    padding: 0;
+    padding: 1rem 0;
     flex-direction: column-reverse;
     gap: 0;
   }
@@ -297,5 +298,54 @@
 
   .home__hero-text-wrapper {
     border: none;
+  }
+}
+/* TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+  .rowVideo {
+    padding: 0 1rem 1rem;
+  }
+  .imageSplitWrapper {
+    padding: 0 1rem;
+  }
+  .textSplit {
+    padding: 1rem 0 0;
+    gap: 1rem;
+  }
+  .imageSplitWrapper:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .galleryWrapper h1 {
+    padding: 2rem 0 1rem;
+  }
+}
+/* mobile big and tablet vertical */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .rowVideo {
+    padding: 2rem 6rem 0rem;
+  }
+  .textSplit {
+    padding: 3rem 0;
+  }
+  .imageSplitWrapper {
+    padding: 0 6rem;
+  }
+
+  .imageSplitWrapper:last-child {
+    padding-bottom: 3rem;
+  }
+}
+
+/* small laptops and tablet horizontal */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .imageSplitWrapper {
+    padding: 0 6rem;
+  }
+  .rowVideo {
+    padding: 2rem 6rem 0;
+  }
+  .textSplit {
+    padding: 2rem 0;
   }
 }
