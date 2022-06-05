@@ -73,9 +73,14 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link to="/" className="menu-link">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.vakinha.com.br/2892353"
+                    className="menu-link"
+                  >
                     Donate
-                  </Link>
+                  </a>
                 </li>
               </div>
 

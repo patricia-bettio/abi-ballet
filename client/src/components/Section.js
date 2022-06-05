@@ -1,12 +1,11 @@
 import React from "react";
 import { Button } from "./Button";
 import { HorizontalDivider } from "./Dividers";
-import { Link } from "react-router-dom";
-import "./Section.css";
 import { NewForm } from "./NewForm";
 import { EmailForm } from "./EmailForm";
 import ReactPlayer from "react-player";
 import { BsDownload } from "react-icons/bs";
+import "./Section.css";
 
 function SectionVideo(props) {
   return (
@@ -23,17 +22,26 @@ function SectionVideo(props) {
                 </p>
               </div>
 
-              <Link to="/" className="donateBtn">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={props.donateLink}
+                className="donateBtn"
+              >
                 <Button buttonSize="btn-medium" buttonColor="blue">
                   Donate
                 </Button>
-              </Link>
-              <Link to="/">
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://docs.google.com/spreadsheets/d/1X-Gik-Sdur7Xlifj6EPEMrbvxbSdKEW3zPIPIyZKDJs/edit?usp=sharing"
+              >
                 <Button buttonSize="btn-medium" buttonColor="primary">
                   <BsDownload />
                   Cost estimate
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 
