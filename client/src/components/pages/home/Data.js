@@ -5,6 +5,7 @@ export const videoData = {
   description:
     "Hi! I'm Rosa Gomes and have worked as a ballet teacher for the last 38 years, the last 6 in Curitiba being hired by the City Hall. I taught many underpriviledged children and teens and we made presentations, even winning prizes. Now it's time to open my own studio to reach more children.",
   video: "https://www.dropbox.com/s/0r5o1o1mdutbfhg/ballet-cover.mp4?dl=0",
+  donateLink: "https://www.vakinha.com.br/2892353",
 };
 
 export const introData = {

@@ -6,8 +6,8 @@
 
 .studentsTable form {
   display: flex;
-  /* place-content: space-between; */
   place-content: flex-start;
+  gap: 1rem;
 }
 .studentsTable form button {
   place-self: flex-end;
@@ -15,10 +15,15 @@
   margin-left: 20px;
 }
 
+.studentsTable label {
+  padding: 0;
+}
+
 .sectionWrapper h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
+  padding: 1rem 0;
 }
 
 .studentsTable th {
@@ -26,7 +31,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  /* background-color: #468189; */
   background-color: #1a525e;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -39,7 +43,6 @@
   padding: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  /* font-weight: 400; */
 }
 
 .studentsTable td svg {
@@ -58,18 +61,11 @@
   font-family: "Cormorant Infant", serif;
   font-weight: 400;
   font-size: 2rem;
+  padding: 1rem 0;
 }
 .representative {
   font-weight: 400;
 }
-
-/* .showError {
-  display: block;
-}
-
-.hideError {
-  display: none;
-} */
 
 @media screen and (max-width: 991px) {
   .studentsTable {

@@ -46,8 +46,7 @@
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: rgba(28, 34, 55, 0.9);
-  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: rgba(33, 52, 56, 0.9);
 }
 
 .image-item:hover .overlay {

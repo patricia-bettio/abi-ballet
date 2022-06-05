@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 
 function Footer() {
@@ -19,9 +18,9 @@ function Footer() {
             <h3>Our partners</h3>
             <div>
               <a
-                href="http://www.fundacaoculturaldecuritiba.com.br/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
+                href="http://www.fundacaoculturaldecuritiba.com.br/"
               >
                 <img
                   className="footer-logo"
@@ -29,15 +28,17 @@ function Footer() {
                   alt="CWB Logo"
                 />
               </a>
-              <Link to="https://www.curitiba.pr.gov.br/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.curitiba.pr.gov.br/"
+              >
                 <img
                   className="footer-logo"
                   src="https://pbstyledk.files.wordpress.com/2022/05/prefeitura.png"
-                  target="_blank"
                   alt="CWB Hall Logo"
-                  rel="noopener noreferrer"
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -50,8 +51,14 @@ function Footer() {
           <div className="footer-link-items">
             <h3>Find us</h3>
             <p>Address to be announced</p>
-            <p>Curitiba/PR</p>
-            <Link to="/">Map</Link>
+            <p>Boqueirão/PR</p>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://goo.gl/maps/g1brqehdb5JggVco9"
+            >
+              Map
+            </a>
           </div>
         </div>
       </div>
@@ -61,29 +68,27 @@ function Footer() {
           <small className="website-rights">PFB., © 2021</small>
 
           <div className="social-icons">
-            <Link
-              className="social-icon-link"
-              to="/"
+            <a
               target="_blank"
-              aria-label="Facebook"
-              rel="noopener noreferrer"
+              rel="noreferrer"
+              href="https://www.facebook.com/profile.php?id=100007148107240&sk=photos"
+              className="social-icon-link"
             >
               <BsFacebook />
-            </Link>
-            <Link
-              className="social-icon-link"
-              to="/"
+            </a>
+            <a
               target="_blank"
-              aria-label="Instagram"
-              rel="noopener noreferrer"
+              rel="noreferrer"
+              className="social-icon-link"
+              href="https://instagram.com/rosa.gomes.79677?igshid=YmMyMTA2M2Y="
             >
               <BsInstagram />
-            </Link>
+            </a>
             <a
-              href="https://www.youtube.com/channel/UCt3j9QYKfYZl6zNznFZBwZA"
               target="_blank"
-              aria-label="YouTube"
-              rel="noopener noreferrer"
+              rel="noreferrer"
+              className="social-icon-link"
+              href="https://www.youtube.com/channel/UCt3j9QYKfYZl6zNznFZBwZA"
             >
               <BsYoutube />
             </a>
