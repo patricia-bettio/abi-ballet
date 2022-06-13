@@ -1,16 +1,16 @@
 import React from "react";
-import "./App.css";
 import Menu from "./components/Menu";
 import Admin from "./components/pages/Admin";
 import LogIn from "./components/pages/LogIn";
 import Footer from "./components/pages/footer/Footer";
+import Home from "./components/pages/home/Home";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
-import Home from "./components/pages/home/Home";
+import "./App.css";
 
 class App extends React.Component {
   render() {
