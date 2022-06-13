@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  Navigate,
   // Link
 } from "react-router-dom";
 import Home from "./components/pages/home/Home";
@@ -38,7 +39,28 @@ class App extends React.Component {
           <Routes>
             {/* <Route path='/' exact component={Home}/> */}
             <Route path="/" element={<Home />} />
-            <Route path="/Admin" element={<Admin />} />
+            {/* {console.log("localS", localStorage)}
+            {console.log(
+              localStorage.getItem("user") === process.env.REACT_APP_ADMIN_USER
+            )} */}
+
+            {/* {localStorage &&
+              localStorage.getItem("user") ===
+                process.env.REACT_APP_ADMIN_USER && (
+                <Route path="/Admin" element={<Admin />} />
+              )} */}
+            <Route
+              path="/Admin"
+              element={
+                localStorage &&
+                localStorage.getItem("user") ===
+                  process.env.REACT_APP_ADMIN_USER ? (
+                  <Admin />
+                ) : (
+                  <Navigate to="/Login" />
+                )
+              }
+            />
             <Route path="/Login" element={<LogIn />} />
             {/* <Route path="/">
             <Home />

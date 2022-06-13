@@ -82,6 +82,23 @@ function Menu() {
                     Donate
                   </a>
                 </li>
+                <li className="menu-item">
+                  {localStorage &&
+                    localStorage.getItem("user") ===
+                      process.env.REACT_APP_ADMIN_USER && (
+                      <Link
+                        to="/Admin"
+                        className="menu-link"
+                        // onClick={(e) => {
+                        //   e.preventDefault();
+                        //   window.location.replace("/#gallery");
+                        //   closeMenu();
+                        // }}
+                      >
+                        Admin Panel
+                      </Link>
+                    )}
+                </li>
               </div>
 
               <div className="menu-items-right menu-link">
