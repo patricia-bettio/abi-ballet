@@ -1,6 +1,6 @@
 import React from "react";
-import { HorizontalGalleryDivider } from "./Dividers";
 import { BsLink } from "react-icons/bs";
+import { HorizontalGalleryDivider } from "./Dividers";
 import "./Gallery.css";
 
 class Gallery extends React.Component {
@@ -9,7 +9,7 @@ class Gallery extends React.Component {
     Object.keys(images).forEach((key) => {
       images[key].forEach((e, key) => {
         singleImage.push(
-          <div className="image-item" key={key}>
+          <div className="imageItem" key={key}>
             <img src={e.img} alt={e.alt} />
             <div className="overlay">
               <div className="textWrapper">
@@ -45,10 +45,8 @@ class Gallery extends React.Component {
     return (
       <div className="galleryWrapper" id="gallery">
         <h1>Gallery & News</h1>
-        <div className="container">
-          <div className="image-gallery">
-            <div className="column">{this.displayImage(images)}</div>
-          </div>
+        <div className="columnWrapper">
+          <div className="column">{this.displayImage(images)}</div>
         </div>
       </div>
     );
