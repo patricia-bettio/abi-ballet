@@ -15,7 +15,6 @@ class NewForm extends React.Component {
 
   handleChange = ({ target }) => {
     // name and value from each input
-    //error state
     const { name, value } = target;
     this.setState({
       [name]: value,
