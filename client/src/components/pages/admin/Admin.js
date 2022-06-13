@@ -8,7 +8,7 @@ import {
   BsTelephone,
   BsEnvelope,
 } from "react-icons/bs";
-import { NewForm } from "../NewForm";
+import { NewForm } from "../../NewForm";
 import "./Admin.css";
 
 class Admin extends React.Component {

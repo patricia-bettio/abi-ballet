@@ -28,16 +28,14 @@ function SectionVideo(props) {
                 href={props.donateLink}
                 className="donateBtn"
               >
-                <Button buttonSize="btn-medium" buttonColor="blue">
-                  Donate
-                </Button>
+                <Button buttonColor="greenBtn">Donate</Button>
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://docs.google.com/spreadsheets/d/1X-Gik-Sdur7Xlifj6EPEMrbvxbSdKEW3zPIPIyZKDJs/edit?usp=sharing"
               >
-                <Button buttonSize="btn-medium" buttonColor="primary">
+                <Button buttonColor="darkBtn">
                   <BsDownload />
                   Cost estimate
                 </Button>

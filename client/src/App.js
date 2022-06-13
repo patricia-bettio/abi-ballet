@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./components/Menu";
-import Admin from "./components/pages/Admin";
-import LogIn from "./components/pages/LogIn";
+import Admin from "./components/pages/admin/Admin";
+import LogIn from "./components/pages/login/LogIn";
 import Footer from "./components/pages/footer/Footer";
 import Home from "./components/pages/home/Home";
 import {

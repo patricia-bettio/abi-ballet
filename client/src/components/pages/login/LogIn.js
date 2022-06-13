@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
-import { Button } from "../Button";
 import { BsPersonBoundingBox, BsExclamationTriangle } from "react-icons/bs";
+import { Button } from "../../Button";
 import "./LogIn.css";
 
 const LogIn = () => {
@@ -89,9 +89,7 @@ const LogIn = () => {
               </p>
             </div>
 
-            <Button buttonSize="btn-medium" buttonColor="blue">
-              Sign in
-            </Button>
+            <Button buttonColor="greenBtn">Sign in</Button>
           </form>
         </div>
       </div>
