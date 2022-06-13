@@ -86,15 +86,7 @@ function Menu() {
                   {localStorage &&
                     localStorage.getItem("user") ===
                       process.env.REACT_APP_ADMIN_USER && (
-                      <Link
-                        to="/Admin"
-                        className="menu-link"
-                        // onClick={(e) => {
-                        //   e.preventDefault();
-                        //   window.location.replace("/#gallery");
-                        //   closeMenu();
-                        // }}
-                      >
+                      <Link to="/Admin" className="menu-link">
                         Admin Panel
                       </Link>
                     )}
@@ -103,10 +95,6 @@ function Menu() {
 
               <div className="menu-items-right menu-link">
                 <div>
-                  {console.log(
-                    localStorage.getItem("user") ===
-                      process.env.REACT_APP_ADMIN_USER
-                  )}
                   {localStorage.getItem("user") ===
                   process.env.REACT_APP_ADMIN_USER ? (
                     <BsPersonX onClick={handleLogOut} />
