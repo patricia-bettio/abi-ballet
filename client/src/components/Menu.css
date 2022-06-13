@@ -1,4 +1,4 @@
-.menu-wrapper {
+.menuWrapper {
   background-color: rgba(252, 247, 248, 0.9);
   height: 55px;
   position: sticky;
@@ -6,15 +6,15 @@
   z-index: 999;
 }
 
-.menu-container {
+.menuContainer {
   justify-content: space-around;
   z-index: 1;
   height: 55px;
   padding: 0 4rem;
 }
 
-.menu-logo,
-.menu-logo-mobile {
+.menuLogo,
+.menuLogoMobile {
   font-family: "Cormorant Infant", serif;
   font-weight: 600;
   font-size: 25px;
@@ -25,7 +25,7 @@
   font-size: 20px;
 }
 
-.menu-items {
+.menuItems {
   display: flex;
   align-items: center;
   place-content: space-between;
@@ -33,15 +33,15 @@
   width: 100%;
 }
 
-.menu-item {
+.menuItem {
   padding: 0 1rem;
 }
 
-.menu-item:hover {
+.menuItem:hover {
   border-bottom: 2px solid #1a525e;
 }
 
-.menu-link {
+.menuLink {
   font-size: 18px;
   color: black;
   font-family: "Roboto", sans-serif;
@@ -52,31 +52,31 @@
   height: 55px;
 }
 
-.menu-icon-mobile {
+.menuIconMobile {
   display: none;
 }
 
-.menu-items-main {
+.menuItemsMain {
   display: flex;
   align-items: center;
 }
-.menu-items-right {
+.menuItemsRight {
   align-self: center;
 }
-.menu-items-right div {
+.menuItemsRight div {
   padding: 0 0.5rem;
 }
 
-.menu-items-right svg {
+.menuItemsRight svg {
   color: black !important;
 }
 
 @media screen and (max-width: 991px) {
-  .menu-wrapper {
+  .menuWrapper {
     display: flex;
   }
 
-  .menu-container {
+  .menuContainer {
     align-self: center;
     align-items: center;
     width: 100%;
@@ -84,28 +84,28 @@
     height: 3rem;
   }
 
-  .menu-icon-mobile {
+  .menuIconMobile {
     display: block;
   }
 
-  .menu-icon-mobile svg {
+  .menuIconMobile svg {
     color: black !important;
   }
 
-  .menu-logo {
+  .menuLogo {
     display: none;
   }
-  .menu-logo-mobile {
+  .menuLogoMobile {
     padding-right: 0;
   }
 }
 
 @media screen and (max-width: 960px) {
-  .menu-items-main {
+  .menuItemsMain {
     flex-direction: column;
   }
 
-  .menu-items {
+  .menuItems {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -114,35 +114,35 @@
     left: -100%;
   }
 
-  .menu-items.active {
+  .menuItems.active {
     background: #fcf7f8;
     left: 0;
     transition: all 0.9s ease;
     top: 3rem;
   }
 
-  .menu-link {
+  .menuLink {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
   }
 
-  .menu-link:hover {
+  .menuLink:hover {
     color: #1c2237;
     transform: scale(1.2);
     transition: all 0.3s ease;
   }
 
-  .menu-item:hover {
+  .menuItem:hover {
     border: none;
   }
 
-  .menu-item {
+  .menuItem {
     width: 100%;
   }
 
-  .menu-icon-mobile {
+  .menuIconMobile {
     display: flex;
     place-content: space-between;
     font-size: 1.8rem;
