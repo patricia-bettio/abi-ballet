@@ -8,8 +8,8 @@ import {
   BsTelephone,
   BsEnvelope,
 } from "react-icons/bs";
+import { NewForm } from "../../NewForm";
 import "./Admin.css";
-import { NewForm } from "../NewForm";
 
 class Admin extends React.Component {
   state = {
@@ -91,21 +91,16 @@ class Admin extends React.Component {
   handleDelete = (id) => {
     axios.delete(`/api/delete/${id}`);
     this.componentDidMount();
-    // todo: update after!
-    // this.displayStudents(this.state.allStudents);
+    //update
+    this.displayStudents(this.state.allStudents);
   };
 
   handleStatus = (student) => {
     console.log(student);
-    console.log(student.status);
     axios.patch(`/api/patch/${student._id}`, {
       status: student.status === false ? true : false,
     });
     this.componentDidMount();
-  };
-
-  handleNew = () => {
-    console.log("student");
   };
 
   render() {

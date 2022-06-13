@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  /* flex-direction: row-reverse; */
   align-items: center;
   padding-bottom: 1rem;
 }
@@ -8,7 +7,6 @@
 .border {
   border-bottom: 1px solid black;
   width: 100%;
-  /* margin-left: auto; */
 }
 
 .vertical-container {

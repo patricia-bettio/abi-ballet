@@ -10,10 +10,6 @@
   padding: 0;
 }
 
-/* .body-wrapper {
-  margin: 0 1rem 0;
-} */
-
 @media screen and (max-width: 960px) {
   .body-wrapper {
     margin: 0;

@@ -5,8 +5,13 @@ import {
   SectionTextOnly,
   SectionQuote,
 } from "../../Section";
-import { introData, videoData, contactData, quoteData1 } from "./Data";
-import { imagesData } from "../data/galleryData";
+import {
+  introData,
+  videoData,
+  contactData,
+  quoteData1,
+} from "../../../data/homeData";
+import { imagesData } from "../../../data/galleryData";
 import { Gallery } from "../../Gallery";
 
 function Home() {

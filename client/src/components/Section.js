@@ -1,10 +1,10 @@
 import React from "react";
+import ReactPlayer from "react-player";
+import { BsDownload } from "react-icons/bs";
 import { Button } from "./Button";
 import { HorizontalDivider } from "./Dividers";
 import { NewForm } from "./NewForm";
 import { EmailForm } from "./EmailForm";
-import ReactPlayer from "react-player";
-import { BsDownload } from "react-icons/bs";
 import "./Section.css";
 
 function SectionVideo(props) {
@@ -28,16 +28,14 @@ function SectionVideo(props) {
                 href={props.donateLink}
                 className="donateBtn"
               >
-                <Button buttonSize="btn-medium" buttonColor="blue">
-                  Donate
-                </Button>
+                <Button buttonColor="greenBtn">Donate</Button>
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://docs.google.com/spreadsheets/d/1X-Gik-Sdur7Xlifj6EPEMrbvxbSdKEW3zPIPIyZKDJs/edit?usp=sharing"
               >
-                <Button buttonSize="btn-medium" buttonColor="primary">
+                <Button buttonColor="darkBtn">
                   <BsDownload />
                   Cost estimate
                 </Button>
@@ -79,7 +77,7 @@ function SectionSplit(props) {
       >
         <div className={props.reverse ? "imageSplit reverseRow" : "imageSplit"}>
           <div className="colText">
-            <div className="home__hero-text-wrapper">
+            <div className="textWrapper">
               <h1 className="heading2 dark">{props.headline}</h1>
               {props.withRegisterForm && <HorizontalDivider />}
               <p className="formSubtitle">{props.description}</p>
@@ -102,11 +100,7 @@ function SectionSplit(props) {
                 </div>
               </>
             ) : (
-              <img
-                src={props.img}
-                alt={props.alt}
-                className="img-fluid shadow-2-strong"
-              />
+              <img src={props.img} alt={props.alt} />
             )}
           </div>
         </div>
@@ -155,7 +149,7 @@ function SectionTextOnly(props) {
           </div>
 
           <div className="colText">
-            <div className="home__hero-text-wrapper">
+            <div className="textWrapper">
               <h1 className="heading2 dark">{props.formHeader}</h1>
               <HorizontalDivider />
 

@@ -1,17 +1,3 @@
-.testCase {
-  background-image: url("https://pbstyledk.files.wordpress.com/2022/05/menino-grupo.jpg");
-  min-height: 500px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-}
-.home__hero-section {
-  color: #fff;
-  padding: 160px 0;
-}
-
 .imageSplit {
   align-items: center;
   place-content: center;
@@ -19,6 +5,7 @@
   flex-direction: "row";
   gap: 3rem;
 }
+
 .textSplit {
   display: flex;
   padding: 4rem 0;
@@ -34,6 +21,7 @@
 .imageSplitWrapper:last-child {
   padding-bottom: 3rem;
 }
+
 .VideoAreaWrapper {
   align-items: center;
   display: flex;
@@ -56,7 +44,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: #f5f5f5; */
 }
 
 .reverseRow {
@@ -66,27 +53,31 @@
 .imageSplitWrapper {
   padding: 0 16rem;
 }
+
 .videoSplitWrapper {
   padding: 0;
   background-color: white;
-  /* background-color: #f5f5f5; */
 }
+
 .colText {
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
 }
+
 .colTextOnly1 {
   max-width: 50%;
   flex-basis: 50%;
   display: flex;
   align-self: start;
 }
+
 .colTextOnly2 {
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
 }
+
 .middleText {
   display: flex;
   gap: 3rem;
@@ -106,20 +97,11 @@
   flex-basis: 100%;
 }
 
-.top-line {
-  color: #f00946;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
 .openQuote {
   font-family: "Cormorant Unicase", serif;
   font-size: 4rem;
 }
+
 .preheading {
   font-family: "Cormorant Infant", serif;
   font-weight: 400;
@@ -128,34 +110,32 @@
 
 .heading {
   font-family: "Cormorant Unicase", serif;
-  /* font-family: "Cormorant Infant", serif; */
   font-weight: 400;
   font-size: 3rem;
   color: black;
 }
 
 .heading2 {
-  /* font-family: "Cormorant Unicase", serif; */
   padding-bottom: 5px;
   font-family: "Cormorant Infant", serif;
   font-weight: 400;
   font-size: 2rem;
 }
-.headingSecondaryText {
-  /* font-family: "Cormorant Unicase", serif; */
-  font-family: "Cormorant Garamond", serif;
 
+.headingSecondaryText {
+  font-family: "Cormorant Garamond", serif;
   color: black;
   font-weight: 400;
   font-size: 20px;
 }
+
 .headingSecondarySub {
   font-family: "Cormorant Unicase", serif;
-
   color: #808080;
   font-weight: 400;
   font-size: 14px;
 }
+
 .openQuoteWrapper {
   display: flex;
 }
@@ -165,19 +145,17 @@
 }
 
 .darkBg {
-  /* background-color: #1c2237; */
   background-color: #f5f5f5;
-  /* background-color: #fcfbfb; */
-  /* background-color: #fff; */
 }
 
 .lightBg {
-  /* background-color: #1c2237; */
   background-color: #fff;
 }
+
 .introNumbers {
   font-family: "Cormorant Infant", serif;
 }
+
 .introWrapper {
   padding: 1rem 0;
 }
@@ -188,9 +166,11 @@
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
+
 .donateBtn {
   margin-right: 1rem;
 }
+
 .heroSub {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -201,6 +181,7 @@
   font-weight: 300;
   font-size: 16px;
 }
+
 .subheading {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -208,11 +189,7 @@
   font-size: 12px;
 }
 
-.home__hero-img-wrapper {
-  width: 100%;
-}
-
-.home__hero-text-wrapper {
+.textWrapper {
   margin: auto;
   border: 1px solid #f2f2f2;
   padding: 2rem;
@@ -222,14 +199,15 @@
   max-width: 100%;
   max-height: 100%;
 }
+
 /* MOBILE */
 @media only screen and (max-width: 576px) {
-  /* @media screen and (max-width: 768px) { */
   .imageSplit {
     display: flex;
     flex-direction: column-reverse;
     align-items: initial;
   }
+
   .textSplit {
     gap: 0;
     padding: 0;
@@ -248,6 +226,7 @@
   .col {
     margin: 0 1rem;
   }
+
   .heading {
     margin: 0;
     font-size: 2rem;
@@ -258,6 +237,7 @@
     max-width: 100%;
     padding: 0;
   }
+
   .imageSplitWrapper {
     padding: 0;
     margin: 1rem;
@@ -296,22 +276,26 @@
     padding: 0;
   }
 
-  .home__hero-text-wrapper {
+  .textWrapper {
     border: none;
   }
 }
+
 /* TABLET */
 @media (min-width: 576px) and (max-width: 992px) {
   .rowVideo {
     padding: 0 1rem 1rem;
   }
+
   .imageSplitWrapper {
     padding: 0 1rem;
   }
+
   .textSplit {
     padding: 1rem 0 0;
     gap: 1rem;
   }
+
   .imageSplitWrapper:last-child {
     padding-bottom: 2rem;
   }
@@ -320,14 +304,17 @@
     padding: 2rem 0 1rem;
   }
 }
+
 /* mobile big and tablet vertical */
 @media (min-width: 992px) and (max-width: 1200px) {
   .rowVideo {
     padding: 2rem 6rem 0rem;
   }
+
   .textSplit {
     padding: 3rem 0;
   }
+
   .imageSplitWrapper {
     padding: 0 6rem;
   }
@@ -342,9 +329,11 @@
   .imageSplitWrapper {
     padding: 0 6rem;
   }
+
   .rowVideo {
     padding: 2rem 6rem 0;
   }
+
   .textSplit {
     padding: 2rem 0;
   }

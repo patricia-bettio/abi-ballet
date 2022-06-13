@@ -1,4 +1,4 @@
-.footer-container {
+.footerContainer {
   background-color: #213438;
   padding: 4rem 0 2rem 0;
   display: flex;
@@ -11,14 +11,16 @@
   color: white;
 }
 
-.footer-container a {
+.footerContainer a {
   color: white;
 }
-.footer-container p {
+
+.footerContainer p {
   font-weight: 200;
   font-size: 16px;
 }
-.footer-container h3 {
+
+.footerContainer h3 {
   font-family: "Cormorant Unicase", serif;
   color: white;
   font-weight: 200;
@@ -26,44 +28,40 @@
   font-size: 18px;
 }
 
-.footer-info {
+.footerInfo {
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
 
-.footer-link-wrapper {
-  display: flex;
-}
-
-.footer-links-wrapper {
+.footerLinksWrapper {
   display: flex;
   justify-self: flex-end;
 }
-.footer-link-items {
+
+.footerLinkItems {
   display: flex;
   flex-direction: column;
   margin: 0 4rem;
 }
 
-/* Social Icons */
-.social-icon-link {
+.soMeLink {
   font-size: 24px;
   color: white;
 }
 
-.social-media {
+.soMeArea {
   width: 100%;
 }
 
-.social-media-wrap {
+.soMeWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
 }
 
-.social-icons {
+.soMeIcons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,53 +69,52 @@
   margin: 0 4rem;
 }
 
-.website-rights {
+.devRights {
   margin: 0 4rem;
   font-family: "Roboto", sans-serif;
 }
-.footer-logo {
+
+.footerLogo {
   height: 90px;
   margin-right: 10px;
 }
 
 @media screen and (max-width: 820px) {
-  .footer-container {
+  .footerContainer {
     margin: 0;
     padding: 1rem 0 1rem 0;
   }
-  .footer-info {
+
+  .footerInfo {
     padding-top: 2rem;
     flex-direction: column;
   }
 
-  .footer-logo {
+  .footerLogo {
     height: 3rem;
   }
 
-  .footer-link-items {
+  .footerLinkItems {
     padding: 20px 0;
   }
 
-  .footer-container h3 {
+  .footerContainer h3 {
     margin: 0 0 5px;
-  }
-
-  .btn {
-    width: auto;
-    margin: 1rem 0;
   }
 
   .footer-link-wrapper {
     flex-direction: column;
   }
-  .footer-links-wrapper {
+
+  .footerLinksWrapper {
     flex-flow: column;
   }
 
-  .social-media-wrap {
+  .soMeWrapper {
     flex-direction: column-reverse;
   }
-  .website-rights {
+
+  .devRights {
     margin: 1rem;
   }
 }

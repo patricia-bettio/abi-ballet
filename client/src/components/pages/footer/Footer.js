@@ -1,20 +1,20 @@
 import React from "react";
-import "./Footer.css";
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer-container">
-      <div className="footer-info">
+    <div className="footerContainer">
+      <div className="footerInfo">
         <div>
-          <div className="footer-link-items">
+          <div className="footerLinkItems">
             <h3>ABI | Rosa Gomes</h3>
             <p>Contribuite to keep the project alive</p>
           </div>
         </div>
 
-        <div className="footer-links-wrapper">
-          <div className="footer-link-items">
+        <div className="footerLinksWrapper">
+          <div className="footerLinkItems">
             <h3>Our partners</h3>
             <div>
               <a
@@ -23,7 +23,7 @@ function Footer() {
                 href="http://www.fundacaoculturaldecuritiba.com.br/"
               >
                 <img
-                  className="footer-logo"
+                  className="footerLogo"
                   src="https://pbstyledk.files.wordpress.com/2022/05/cwbfc.png"
                   alt="CWB Logo"
                 />
@@ -34,7 +34,7 @@ function Footer() {
                 href="https://www.curitiba.pr.gov.br/"
               >
                 <img
-                  className="footer-logo"
+                  className="footerLogo"
                   src="https://pbstyledk.files.wordpress.com/2022/05/prefeitura.png"
                   alt="CWB Hall Logo"
                 />
@@ -42,13 +42,13 @@ function Footer() {
             </div>
           </div>
 
-          <div className="footer-link-items">
+          <div className="footerLinkItems">
             <h3>Contact us</h3>
             <p>Phone: +55 41 9997-4578</p>
             <p>tiarosagomes@gmail.com</p>
           </div>
 
-          <div className="footer-link-items">
+          <div className="footerLinkItems">
             <h3>Find us</h3>
             <p>Address to be announced</p>
             <p>Boqueirão/PR</p>
@@ -63,23 +63,23 @@ function Footer() {
         </div>
       </div>
 
-      <section className="social-media">
-        <div className="social-media-wrap">
-          <small className="website-rights">PFB., © 2021</small>
+      <section className="soMeArea">
+        <div className="soMeWrapper">
+          <small className="devRights">PFB., © 2021</small>
 
-          <div className="social-icons">
+          <div className="soMeIcons">
             <a
               target="_blank"
               rel="noreferrer"
               href="https://www.facebook.com/profile.php?id=100007148107240&sk=photos"
-              className="social-icon-link"
+              className="soMeLink"
             >
               <BsFacebook />
             </a>
             <a
               target="_blank"
               rel="noreferrer"
-              className="social-icon-link"
+              className="soMeLink"
               href="https://instagram.com/rosa.gomes.79677?igshid=YmMyMTA2M2Y="
             >
               <BsInstagram />
@@ -87,7 +87,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noreferrer"
-              className="social-icon-link"
+              className="soMeLink"
               href="https://www.youtube.com/channel/UCt3j9QYKfYZl6zNznFZBwZA"
             >
               <BsYoutube />

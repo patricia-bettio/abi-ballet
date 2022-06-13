@@ -3,7 +3,6 @@ const router = express.Router();
 const AddStudents = require("../models/students");
 
 // GET
-
 router.get("/", async (req, res) => {
   AddStudents.find({}, (err, result) => {
     if (err) {
@@ -36,27 +35,12 @@ router.post("/students", (req, res) => {
   const data = req.body;
   const addNewStudent = new AddStudents(data);
   addNewStudent.save((error) => {
-    // if (error) {
-    //   console.log(error);
-    //   res.status(500).json({ msg: "ops, data was not sent!" });
-    // } else {
-    //   res.json({ msg: "posted data!" });
-    // }
     if (error) {
-      // console.log(error);
       res.status(500).json({ msg: "ops, data was not sent!" });
       return;
     }
     return res.json({ msg: "posted data now!" });
   });
 });
-
-// router.get("/name", (req, res) => {
-//   const data = {
-//     username: "patricia",
-//     age: 21,
-//   };
-//   res.json(data);
-// });
 
 module.exports = router;

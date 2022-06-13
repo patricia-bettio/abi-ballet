@@ -15,7 +15,6 @@ class NewForm extends React.Component {
 
   handleChange = ({ target }) => {
     // name and value from each input
-    //error state
     const { name, value } = target;
     this.setState({
       [name]: value,
@@ -133,9 +132,7 @@ class NewForm extends React.Component {
                 />
               </label>
             </div>
-            <Button buttonSize="btn--wide" buttonColor="blue">
-              Submit
-            </Button>
+            <Button buttonColor="greenBtn">Submit</Button>
             <div className={this.state.success ? "showSuccess" : "hideSuccess"}>
               Thank you! We are looking forward to meeting you, you will be
               contacted within 48h.

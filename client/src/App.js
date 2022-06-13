@@ -1,33 +1,16 @@
 import React from "react";
-import "./App.css";
 import Menu from "./components/Menu";
-import Admin from "./components/pages/Admin";
-import LogIn from "./components/pages/LogIn";
+import Admin from "./components/pages/admin/Admin";
+import LogIn from "./components/pages/login/LogIn";
 import Footer from "./components/pages/footer/Footer";
+import Home from "./components/pages/home/Home";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  // Link
+  Navigate,
 } from "react-router-dom";
-import Home from "./components/pages/home/Home";
-// import { render } from '../api/app';
-
-// class App extends React.Component {
-//   constructor(props){
-//     super(props);
-//     this.state = { apiResponse:""};
-//   }
-
-//   callAPI(){
-//     fetch('http://localhost:9000/testAPI')
-//     .then(res => res.text())
-//     .then(res => this.setState({apiResponse: res}));
-//   }
-
-//   componentWillMount(){
-//     this.callAPI();
-//   }
+import "./App.css";
 
 class App extends React.Component {
   render() {
@@ -36,21 +19,22 @@ class App extends React.Component {
         <Menu />
         <div className="body-wrapper">
           <Routes>
-            {/* <Route path='/' exact component={Home}/> */}
             <Route path="/" element={<Home />} />
-            <Route path="/Admin" element={<Admin />} />
+            <Route
+              path="/Admin"
+              element={
+                localStorage &&
+                localStorage.getItem("user") ===
+                  process.env.REACT_APP_ADMIN_USER ? (
+                  <Admin />
+                ) : (
+                  <Navigate to="/Login" />
+                )
+              }
+            />
             <Route path="/Login" element={<LogIn />} />
-            {/* <Route path="/">
-            <Home />
-          </Route> */}
           </Routes>
         </div>
-        {/* <Route path="/about">
-            <About />
-            </Route>
-            <Route path="/users">
-            <Users />
-          </Route> */}
         <Footer />
       </Router>
     );

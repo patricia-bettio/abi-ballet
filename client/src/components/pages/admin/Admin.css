@@ -15,6 +15,10 @@
   margin-left: 20px;
 }
 
+.studentsTable .showSuccess {
+  display: contents;
+}
+
 .studentsTable label {
   padding: 0;
 }

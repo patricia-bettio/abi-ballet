@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsPerson, BsPersonX, BsList, BsX } from "react-icons/bs";
-import "./Menu.css";
 import { IconContext } from "react-icons/lib";
+import "./Menu.css";
 
 function Menu() {
   const [click, setClick] = useState(false);
@@ -18,25 +18,25 @@ function Menu() {
   return (
     <>
       <IconContext.Provider value={{ color: "black" }}>
-        <div className="menu-wrapper">
-          <div className="menu-container">
-            <div className="menu-icon-mobile" onClick={handleClick}>
-              <Link to="/" className="menu-logo-mobile" onClick={closeMenu}>
+        <div className="menuWrapper">
+          <div className="menuContainer">
+            <div className="menuIconMobile" onClick={handleClick}>
+              <Link to="/" className="menuLogoMobile" onClick={closeMenu}>
                 ABI | Rosa Gomes
               </Link>
               {click ? <BsX /> : <BsList />}
             </div>
 
-            <ul className={click ? "menu-items active" : "menu-items"}>
-              <div className="menu-items-main">
-                <Link to="/" className="menu-logo">
+            <ul className={click ? "menuItems active" : "menuItems"}>
+              <div className="menuItemsMain">
+                <Link to="/" className="menuLogo">
                   ABI | Rosa Gomes
                 </Link>
 
-                <li className="menu-item">
+                <li className="menuItem">
                   <Link
                     to="/"
-                    className="menu-link"
+                    className="menuLink"
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#about");
@@ -46,10 +46,10 @@ function Menu() {
                     About us
                   </Link>
                 </li>
-                <li className="menu-item">
+                <li className="menuItem">
                   <Link
                     to="/"
-                    className="menu-link"
+                    className="menuLink"
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#register");
@@ -59,10 +59,10 @@ function Menu() {
                     Register
                   </Link>
                 </li>
-                <li className="menu-item">
+                <li className="menuItem">
                   <Link
                     to="/"
-                    className="menu-link"
+                    className="menuLink"
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.replace("/#gallery");
@@ -72,31 +72,36 @@ function Menu() {
                     Gallery
                   </Link>
                 </li>
-                <li className="menu-item">
+                <li className="menuItem">
                   <a
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.vakinha.com.br/2892353"
-                    className="menu-link"
+                    className="menuLink"
                   >
                     Donate
                   </a>
                 </li>
+                <li className="menuItem">
+                  {localStorage &&
+                    localStorage.getItem("user") ===
+                      process.env.REACT_APP_ADMIN_USER && (
+                      <Link to="/Admin" className="menuLink">
+                        Admin Panel
+                      </Link>
+                    )}
+                </li>
               </div>
 
-              <div className="menu-items-right menu-link">
+              <div className="menuItemsRight menuLink">
                 <div>
-                  {console.log(
-                    localStorage.getItem("user") ===
-                      process.env.REACT_APP_ADMIN_USER
-                  )}
                   {localStorage.getItem("user") ===
                   process.env.REACT_APP_ADMIN_USER ? (
                     <BsPersonX onClick={handleLogOut} />
                   ) : (
                     <Link
                       to={"/Login"}
-                      className="menu-link"
+                      className="menuLink"
                       onClick={closeMenu}
                     >
                       <BsPerson />
